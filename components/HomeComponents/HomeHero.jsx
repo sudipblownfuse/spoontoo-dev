@@ -22,7 +22,7 @@ const HomeHero = () => {
   };
 
   return (
-    <section className="w-full relative h-auto bg-[#101010] mt-[8vh]">
+    <section className="w-full relative h-auto bg-[#101010] mt-[8vh] flex flex-col items-center justify-center">
       <div className="relative w-full h-[650px] width-container mx-auto flex justify-between items-center px-5">
         {/* text section */}
         <div className="w-[60%] flex flex-col justify-center">
@@ -51,11 +51,11 @@ const HomeHero = () => {
           </motion.h5>
 
           <motion.button
-            className="uppercase w-fit px-4 py-3 text-white bg-secondary rounded-md 
-          transform transition-transform hover:scale-105 duration-300 ease-in-out"
+            className="uppercase w-fit px-4 py-3 text-white bg-secondary rounded-md"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
           >
             Book a Demo
           </motion.button>
@@ -99,11 +99,9 @@ const HomeHero = () => {
           </motion.div>
         </div>
       </div>
-      <Image
-        src={ArrowDown}
-        alt="arrow-down"
-        className="absolute left-1/2 -bottom-8"
-      />
+      <div className="w-full width-container absolute flex -bottom-7 justify-center">
+        <Image src={ArrowDown} alt="arrow-down" className="" />
+      </div>
     </section>
   );
 };
