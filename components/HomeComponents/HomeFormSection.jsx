@@ -114,7 +114,8 @@ const HomeFormSection = () => {
                 viewport={{ once: true }}
               >
                 <label className="block text-gray-700 font-semibold mb-1">
-                  First Name
+                    
+                  First Name<span className="text-secondary">*</span>
                 </label>
                 <input
                   type="text"
@@ -132,7 +133,7 @@ const HomeFormSection = () => {
                 viewport={{ once: true }}
               >
                 <label className="block text-gray-700 font-semibold mb-1">
-                  Last Name
+                  Last Name<span className="text-secondary">*</span>
                 </label>
                 <input
                   type="text"
@@ -150,7 +151,7 @@ const HomeFormSection = () => {
               viewport={{ once: true }}
             >
               <label className="block text-gray-700 font-semibold mb-1">
-                Email ID
+                Email ID<span className="text-secondary">*</span>
               </label>
               <input
                 type="email"
@@ -167,7 +168,7 @@ const HomeFormSection = () => {
               viewport={{ once: true }}
             >
               <label className="block text-gray-700 font-semibold mb-1">
-                Message
+                Message<span className="text-secondary">*</span>
               </label>
               <textarea
                 className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-blue-500 focus:outline-none"
