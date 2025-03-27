@@ -30,13 +30,13 @@ const Footer = () => {
     { name: "Support", path: "/support" },
   ];
   return (
-    <footer className="relative w-full h-auto">
+    <footer className="relative w-full h-auto ">
       <Image
         src={footerBgImg}
         className="absolute w-full h-full object-cover"
         alt="footer-bg"
       />
-      <div className="relative bg-black w-full h-full opacity-95 p-5">
+      <div className="relative bg-black w-full h-full opacity-95 p-8">
         <div className="w-full width-container h-auto mx-auto flex justify-between items-center pt-14">
           {/* Logo & Description */}
           <div className="w-1/3 pr-5">

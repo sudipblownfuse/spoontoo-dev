@@ -3,6 +3,7 @@
 import AboutSpoontoo from '@/components/HomeComponents/AboutSpoontoo'
 import DiningExperience from '@/components/HomeComponents/DiningExperience';
 import HighlightedFeatures from '@/components/HomeComponents/HighlightedFeatures'
+import HomeFormSection from '@/components/HomeComponents/HomeFormSection';
 import HomeHero from '@/components/HomeComponents/HomeHero'
 import OurTopClients from '@/components/HomeComponents/OurTopClients';
 import SuccessStories from '@/components/HomeComponents/SuccessStories';
@@ -17,6 +18,7 @@ const page = () => {
       <OurTopClients/>
       <DiningExperience/>
       <SuccessStories/>
+      <HomeFormSection/>
     </main>
   )
 }

@@ -68,7 +68,7 @@ const HighlightedFeatures = () => {
 
   return (
     <section className="w-full h-auto py-20">
-      <div className="w-full width-container mx-auto flex flex-col items-center">
+      <div className="w-full width-container mx-auto flex flex-col items-center px-14">
         {/* title & description */}
         <div className="flex flex-col items-center">
           <motion.h3
@@ -95,7 +95,7 @@ const HighlightedFeatures = () => {
         </div>
 
         {/* Features and image */}
-        <div className="w-full h-auto flex items-center justify-center px-10">
+        <div className="w-full h-auto flex items-center justify-center px-5">
           {/* image carousel slider */}
           <div className="w-[50%]">
             <motion.div

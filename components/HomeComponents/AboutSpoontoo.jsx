@@ -10,7 +10,7 @@ const AboutSpoontoo = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="w-full flex flex-col items-center justify-center px-5">
+      <div className="w-full flex flex-col items-center justify-center px-14">
         <motion.h2 
           className="text-4xl font-bold"
           initial={{ opacity: 0, y: 50 }}

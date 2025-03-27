@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-[#101010] h-[10vh] fixed flex justify-center items-center text-white z-20 inset-0">
-      <div className="w-full width-container text-white flex justify-between items-center px-6 py-3">
+      <div className="w-full width-container text-white flex justify-between items-center px-14 py-3">
         {/* LOGO */}
         <div>
           <Link href="/">

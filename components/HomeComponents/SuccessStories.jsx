@@ -54,7 +54,7 @@ const SuccessStories = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-5">
+    <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-14">
       <h3 className="text-4xl font-semibold text-white py-10">
         Success Stories
       </h3>
@@ -104,13 +104,13 @@ const SuccessStories = () => {
 
         {/* Custom Navigation Buttons */}
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 text-secondary  rounded-full shadow-lg"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary  rounded-full shadow-lg"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <FaAngleLeft size={24} />
         </button>
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-secondary rounded-full shadow-lg"
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary rounded-full shadow-lg"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <FaAngleRight size={24} />

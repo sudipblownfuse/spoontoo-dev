@@ -9,7 +9,7 @@ import sandwich from "@/public/HomeImages/sandwich.png";
 const DiningExperience = () => {
   return (
     <section className="w-full h-auto py-28">
-      <div className="w-full width-container mx-auto flex justify-center items-center px-5">
+      <div className="w-full width-container mx-auto flex justify-center items-center px-14">
         {/* text Section */}
         <div className="w-1/2 flex flex-col">
           <motion.h3
@@ -38,11 +38,11 @@ const DiningExperience = () => {
 
           <motion.button
             className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3"
-            initial={{ opacity: 0, x: -50 }} // Button starts off-screen left
-            whileInView={{ opacity: 1, x: 0 }} // Moves into view
-            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // Slight delay for better flow
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }} // Keeps hover effect
+            whileHover={{ scale: 1.05 }}
           >
             Book A Demo
           </motion.button>
