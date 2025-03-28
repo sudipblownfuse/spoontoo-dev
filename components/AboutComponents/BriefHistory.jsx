@@ -12,8 +12,7 @@ const historyData2 = [
     id: 1,
     Year: 2018,
     month: "November",
-    description:
-      "Spoontoo was created as part of a Startup Sprint",
+    description: "Spoontoo was created as part of a Startup Sprint",
   },
   {
     id: 2,
@@ -71,7 +70,6 @@ const historyData2 = [
     description:
       "Spoontoo was accepted into AngelPad startup accelerator, with initial $120,000 investment",
   },
-
 ];
 
 const BriefHistory = () => {
@@ -80,31 +78,33 @@ const BriefHistory = () => {
   return (
     <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-5 relative">
       <div className="w-full width-container px-14">
-      <h2 className="text-4xl font-semibold text-white py-10">
-        A Brief History
-      </h2>
+        <h2 className="text-4xl font-semibold text-white py-10">
+          A Brief History
+        </h2>
       </div>
 
       <div className="w-full width-container mx-auto relative px-20 py-6">
         <div className="mx-20 absolute h-[1px] bg-white top-32 inset-0"></div>
         <Swiper
-  ref={swiperRef}
-  modules={[Pagination, Autoplay]}
-  slidesPerView={4}
-  spaceBetween={30}
-  pagination={{ clickable: true, el: ".custom-pagination" }}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  loop={true}
-  className="w-full px-10 my-14"
-  onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
-  onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
->
+          ref={swiperRef}
+          modules={[Pagination, Autoplay]}
+          slidesPerView={4}
+          spaceBetween={30}
+          pagination={{ clickable: true, el: ".custom-pagination" }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          className="w-full px-10 my-14"
+          onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
+          onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
+        >
           {historyData2.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="w-56 text-white flex flex-col items-start gap-4">
                 <h4 className="text-xl font-semibold">{item.Year}</h4>
                 <div className="h-3 w-3 rounded-full bg-secondary"></div>
-                <h6 className="inline-block text-black font-light px-3 py-1 bg-white rounded-full">{item.month}</h6>
+                <h6 className="inline-block text-black font-light px-3 py-1 bg-white rounded-full">
+                  {item.month}
+                </h6>
                 <h6 className="text-gray-300">{item.description}</h6>
               </div>
             </SwiperSlide>

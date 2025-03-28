@@ -6,6 +6,7 @@ import HighlightedFeatures from '@/components/HomeComponents/HighlightedFeatures
 import HomeFormSection from '@/components/HomeComponents/HomeFormSection';
 import HomeHero from '@/components/HomeComponents/HomeHero'
 import OurTopClients from '@/components/HomeComponents/OurTopClients';
+import ScanToExperience from '@/components/HomeComponents/ScanToExperience';
 import SuccessStories from '@/components/HomeComponents/SuccessStories';
 import React from 'react'
 
@@ -14,6 +15,7 @@ const page = () => {
     <main className="min-h-screen">
       <HomeHero/>
       <AboutSpoontoo/>
+      <ScanToExperience/>
       <HighlightedFeatures/>
       <OurTopClients/>
       <DiningExperience/>
