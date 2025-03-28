@@ -44,7 +44,7 @@ const PricingCards = ({ isYearly }) => {
   ];
 
   return (
-    <div className="w-full width-container mx-auto px-10 flex justify-center items-center pt-16">
+    <div className="w-full width-container mx-auto px-10 flex justify-center items-center pt-16 pb-20">
       {packageData.map((item, index) => (
         <div
           key={index}
