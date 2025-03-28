@@ -3,7 +3,9 @@
 import AboutHero from '@/components/AboutComponents/AboutHero';
 import BriefHistory from '@/components/AboutComponents/BriefHistory';
 import ImageSection from '@/components/AboutComponents/ImageSection';
+import JoinUs from '@/components/AboutComponents/JoinUs';
 import OpenDetails from '@/components/AboutComponents/OpenDetails';
+import OurTeam from '@/components/AboutComponents/OurTeam';
 import OurValues from '@/components/AboutComponents/OurValues';
 import React from 'react'
 
@@ -15,6 +17,8 @@ const page = () => {
         <BriefHistory/>
         <ImageSection/>
         <OurValues/>
+        <OurTeam/>
+        <JoinUs/>
     </main>
   )
 }
