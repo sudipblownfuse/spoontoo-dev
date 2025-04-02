@@ -11,7 +11,7 @@ const HeadingSection = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           Pricing Table
         </motion.h1>
@@ -21,7 +21,7 @@ const HeadingSection = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
