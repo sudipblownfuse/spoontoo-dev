@@ -59,7 +59,7 @@ const ProcessFlow = () => {
         </motion.h3>
 
         {/* Cards */}
-        <div className="w-full flex flex-row flex-wrap gap-3">
+        <div className="w-full flex flex-row justify-between flex-wrap gap-3">
           {data.map((item, index) => (
             <motion.div
               key={index}

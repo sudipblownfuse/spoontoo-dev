@@ -32,7 +32,7 @@ const CareetTopSec = () => {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3}}
           >
             <div className="w-[90%]">
               <Image src={topSectionImg} alt="img" />
@@ -45,7 +45,7 @@ const CareetTopSec = () => {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3}}
           >
             <h3 className="text-3xl font-semibold">
             What Makes Life At Spoontoo Different And Thriving?
