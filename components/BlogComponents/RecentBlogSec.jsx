@@ -10,19 +10,19 @@ const RecentBlogSec = ({ recentBlogs }) => {
   const otherRecentBlogs = recentBlogs.slice(1, 4);
 
   return (
-    <section className="w-full h-auto pt-20 pb-10">
+    <section className="w-full h-auto pt-32 pb-10">
       <div className="w-full width-container relative mx-auto px-14 flex flex-col items-center">
         {/* Heading */}
         <div className="absolute w-full px-14">
-        <motion.h2
-          className="w-full text-4xl font-semibold text-start"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          Recent Blogs Posts
-        </motion.h2>
+          <motion.h2
+            className="w-full relative text-4xl font-semibold text-start"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            Recent Blogs Posts
+          </motion.h2>
         </div>
 
         {/* ---------------------- Recent Blogs -------------------- */}
@@ -78,7 +78,19 @@ const RecentBlogSec = ({ recentBlogs }) => {
                   </p>
                 ))}
               </motion.div>
-              <HiMiniArrowUturnRight size={50} className="absolute p-3 rounded-full text-gray-300 bg-gray-600 top-5 right-4 cursor-pointer transform transition-all hover:bg-black hover:text-secondary duration-300 ease-in-out" />
+              <motion.div
+              className="absolute top-5 right-4"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              >
+              <HiMiniArrowUturnRight
+                size={50}
+                className="relative p-3 rounded-full text-gray-300 bg-gray-600  cursor-pointer 
+                transform transition-all hover:bg-black hover:text-secondary duration-300 ease-in-out"
+              />
+              </motion.div>
             </div>
           </div>
 
@@ -97,7 +109,10 @@ const RecentBlogSec = ({ recentBlogs }) => {
                   delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.25)" }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.25)",
+                }}
               >
                 {/* image */}
                 <div className="w-[36%] h-44 object-cover rounded-2xl">
