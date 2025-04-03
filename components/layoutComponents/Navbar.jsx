@@ -20,7 +20,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-[#101010] h-[11vh] fixed flex justify-center items-center text-white z-20 inset-0">
+    <nav className="w-full bg-[#101010] h-24 fixed flex justify-center items-center text-white z-20 inset-0">
       <div className="w-full width-container text-white flex justify-between items-center px-14 py-3">
         {/* LOGO */}
         <div>

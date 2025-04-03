@@ -22,7 +22,7 @@ const HomeHero = () => {
   };
 
   return (
-    <section className="w-full relative h-auto bg-[#101010] mt-[8vh] flex flex-col items-center justify-center">
+    <section className="w-full relative h-auto bg-[#101010] pt-20 flex flex-col items-center justify-center">
       <div className="relative w-full h-[650px] width-container mx-auto flex justify-between items-center px-14">
         {/* text section */}
         <div className="w-[60%] flex flex-col justify-center">

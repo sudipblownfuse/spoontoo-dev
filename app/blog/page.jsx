@@ -158,7 +158,7 @@ const page = () => {
     ]
 
   return (
-    <main className="w-full min-h-screen pt-[8vh]">
+    <main className="w-full min-h-screen pt-28">
       <BlogTopSec/>
       <RecentBlogSec recentBlogs={recentBlogs}/>
       <AllBlogsSec allBlogs={allBlogs}/>
