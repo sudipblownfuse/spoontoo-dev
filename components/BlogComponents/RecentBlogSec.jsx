@@ -60,6 +60,22 @@ const RecentBlogSec = ({ recentBlogs }) => {
               >
                 {highlightedBlog.description}
               </motion.h6>
+              <motion.div
+                className="w-full flex justify-start gap-5 pt-3"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                {highlightedBlog.categories.map((category, i) => (
+                  <p
+                    key={i}
+                    className="text-sm text-white bg-secondary px-4 py-1 rounded-full"
+                  >
+                    {category}
+                  </p>
+                ))}
+              </motion.div>
               <HiMiniArrowUturnRight className="absolute text-3xl text-gray-500 top-5 right-8" />
             </div>
           </div>
