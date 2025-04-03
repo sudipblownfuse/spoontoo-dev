@@ -11,20 +11,22 @@ const RecentBlogSec = ({ recentBlogs }) => {
 
   return (
     <section className="w-full h-auto pt-20 pb-10">
-      <div className="w-full width-container mx-auto px-14 flex flex-col items-center">
+      <div className="w-full width-container relative mx-auto px-14 flex flex-col items-center">
         {/* Heading */}
+        <div className="absolute w-full px-14">
         <motion.h2
-          className="w-full text-3xl font-semibold text-start"
+          className="w-full text-4xl font-semibold text-start"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          Recent Blogs Post
+          Recent Blogs Posts
         </motion.h2>
+        </div>
 
         {/* ---------------------- Recent Blogs -------------------- */}
-        <div className="w-full h-auto flex justify-between pt-5 ">
+        <div className="w-full h-auto flex justify-between items-center ">
           {/* --------------- Highlighted Blog ------------ */}
           <div className="w-1/2 pr-4 flex flex-col items-start">
             <motion.div
@@ -52,7 +54,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
                 {highlightedBlog.title}
               </motion.h4>
               <motion.h6
-                className="w-[95%]"
+                className="w-[95%] pt-4"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -76,28 +78,29 @@ const RecentBlogSec = ({ recentBlogs }) => {
                   </p>
                 ))}
               </motion.div>
-              <HiMiniArrowUturnRight className="absolute text-3xl text-gray-500 top-5 right-8" />
+              <HiMiniArrowUturnRight size={50} className="absolute p-3 rounded-full text-gray-300 bg-gray-600 top-5 right-4 cursor-pointer transform transition-all hover:bg-black hover:text-secondary duration-300 ease-in-out" />
             </div>
           </div>
 
           {/* ----------------- Other RECENT Blogs --------------- */}
-          <div className="w-1/2 pl-2 flex flex-col gap-5 items-start">
+          <div className="w-1/2 p-2 flex flex-col gap-3 items-start">
             {/* blog */}
             {otherRecentBlogs.map((blog, index) => (
               <motion.div
                 key={index}
-                className="w-full h-44 flex justify-between"
+                className="w-full h-auto p-4 bg-white drop-shadow-xl flex justify-between rounded-2xl cursor-pointer"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
-                  delay: index * 0.2, // Each div appears one after another
+                  delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.25)" }}
               >
                 {/* image */}
-                <div className="w-[36%] h-full object-cover rounded-2xl">
+                <div className="w-[36%] h-44 object-cover rounded-2xl">
                   <Image
                     className="h-full w-full object-cover rounded-2xl"
                     src={blog.image}
@@ -105,7 +108,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
                   />
                 </div>
                 {/* Details */}
-                <div className="w-[60%] flex flex-col items-start pl-2">
+                <div className="w-[60%] h-auto flex flex-col items-start pl-2">
                   <h5 className="font-semibold">{blog.title}</h5>
                   <h6 className="text-sm py-2">{blog.description}</h6>
                   {/* categories */}
