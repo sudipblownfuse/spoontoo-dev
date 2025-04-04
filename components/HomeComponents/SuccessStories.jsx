@@ -54,12 +54,12 @@ const SuccessStories = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-14">
-      <h3 className="text-4xl font-semibold text-white py-10">
+    <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-0 sm:my-10 px-5 md:px-14">
+      <h3 className=" text-3xl sm:text-4xl font-semibold text-white py-10">
         Success Stories
       </h3>
 
-      <div className="w-full width-container mx-auto relative px-20">
+      <div className="w-full width-container mx-auto relative px-2 md:px-20">
         <Swiper
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
@@ -72,7 +72,7 @@ const SuccessStories = () => {
             640: { slidesPerView: 1 },
             1024: { slidesPerView: 2 },
           }}
-          className="w-full px-10 flex justify-center"
+          className="w-full px-0 md:px-10 flex justify-center"
         >
           {successStories.map((story, index) => (
             <SwiperSlide key={story.id}>
@@ -87,14 +87,14 @@ const SuccessStories = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="flex justify-start items-start gap-5">
+                <div className="flex flex-col sm:flex-row justify-start items-center sm:items-start gap-5">
                   <Image className=" h-32 w-32 rounded-full object-cover" src={story.img} alt="client-img" />
-                  <div>
-                  <h4 className="text-xl font-semibold text-white">
-                    {story.name}
-                    <span className="uppercase font-semibold text-sm text-gray-300 pl-3">.{story.designation}</span>
+                  <div className="flex flex-col items-center sm:items-start">
+                  <h4 className="text-xl font-semibold text-white flex flex-col items-center sm:flex-row sm:items-center">
+                    <span>{story.name}</span>
+                    <span className="uppercase font-semibold text-sm text-gray-300 pl-0 sm:pl-3">.{story.designation}</span>
                   </h4>
-                  <p className="text-gray-300 mt-3">{story.story}</p>
+                  <p className="text-gray-300 mt-3 text-center sm:text-start text-sm sm:text-base">{story.story}</p>
                 </div>
                 </div>
               </motion.div>
@@ -104,13 +104,13 @@ const SuccessStories = () => {
 
         {/* Custom Navigation Buttons */}
         <button
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary  rounded-full shadow-lg"
+          className="absolute -left-4 md:left-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary  rounded-full shadow-lg"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <FaAngleLeft size={24} />
         </button>
         <button
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary rounded-full shadow-lg"
+          className="absolute -right-4 md:right-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary rounded-full shadow-lg"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <FaAngleRight size={24} />

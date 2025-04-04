@@ -13,8 +13,8 @@ const images = [clientImg1, clientImg2, clientImg3, clientImg4, clientImg5];
 
 const OurTopClients = () => {
   return (
-    <section className="w-full h-72 bg-black flex flex-col justify-start items-center overflow-hidden my-6">
-      <h3 className="text-4xl font-semibold text-white py-10">Our Top Clients</h3>
+    <section className="w-full h-56 sm:h-72 bg-black flex flex-col justify-start items-center overflow-hidden my-6">
+      <h3 className="text-2xl sm:text-4xl font-semibold text-white py-8 sm:py-10">Our Top Clients</h3>
       <div className="w-full relative flex overflow-hidden">
         <motion.div
           className="flex gap-10 w-max"
@@ -27,7 +27,7 @@ const OurTopClients = () => {
         >
           {/* Duplicate images for seamless transition */}
           {[...images, ...images,...images, ...images].map((img, index) => (
-            <Image key={index} src={img} alt={`Client-${index}`} className="h-24 mx-4" />
+            <Image key={index} src={img} alt={`Client-${index}`} className="h-16 sm:h-24 mx-4" />
           ))}
         </motion.div>
       </div>

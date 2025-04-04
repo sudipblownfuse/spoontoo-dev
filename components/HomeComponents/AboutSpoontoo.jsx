@@ -3,16 +3,12 @@ import { motion } from "framer-motion";
 
 const AboutSpoontoo = () => {
   return (
-    <motion.section 
-      className="w-full width-container mx-auto flex justify-center pt-20"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }}
+    <section 
+      className="w-full width-container mx-auto flex justify-center pt-16 md:pt-20"
     >
-      <div className="w-full flex flex-col items-center justify-center px-14">
+      <div className="w-full flex flex-col items-center justify-center px-5 md:px-14">
         <motion.h2 
-          className="text-4xl font-bold"
+          className="text-2xl md:text-4xl font-bold"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -20,7 +16,7 @@ const AboutSpoontoo = () => {
         >
           About <span className="text-secondary">Spoontoo</span>
         </motion.h2>
-        <div className="w-[68%] flex flex-col items-center gap-5 py-8">
+        <div className="w-full md:w-[68%] flex flex-col items-center gap-3 md:gap-5 py-9 text-sm md:text-base">
           <motion.h5 
             className="text-center"
             initial={{ opacity: 0, y: 50 }}
@@ -56,7 +52,7 @@ const AboutSpoontoo = () => {
           </motion.button>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

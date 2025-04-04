@@ -10,13 +10,13 @@ import clockIcon from "@/public/footer/clock.svg";
 
 const HomeFormSection = () => {
   return (
-    <section className="w-fulll h-auto pt-20 pb-40">
-      <div className="w-full width-container mx-auto px-14 flex justify-between">
+    <section className="w-fulll h-auto pt-20 pb-20 lg:pb-40">
+      <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col lg:flex-row justify-between items-center">
         {/* Text-section */}
-        <div className="w-[40%] h-auto flex flex-col items-start gap-10">
+        <div className="w-[90%] lg:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4 lg:gap-10">
           {/* Heading */}
           <motion.h3
-            className="text-3xl font-semibold"
+            className="font-semibold text-center lg:text-start text-2xl sm:text-3xl"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -29,6 +29,7 @@ const HomeFormSection = () => {
 
           {/* Subtext */}
           <motion.h6
+          className="text-center lg:text-start text-sm sm:text-base"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -38,8 +39,8 @@ const HomeFormSection = () => {
             looks great but drives real growth for your product.
           </motion.h6>
 
-          <div className="w-full">
-            <ul className="w-[80%] flex flex-col items-start space-y-5 text-black">
+          <div className="hidden lg:flex justify-center w-full">
+            <ul className="w-[80%] flex flex-col items-start space-y-2 lg:space-y-5 text-black text-sm sm:text-base">
               {[
                 {
                   icon: locationIcon,
@@ -99,15 +100,15 @@ const HomeFormSection = () => {
         </div>
 
         {/* Form Section */}
-        <div className="w-[60%] h-auto mx-5 bg-white shadow-lg drop-shadow-lg rounded-2xl">
+        <div className="w-full lg:w-[60%] h-auto mx-5 bg-white shadow-lg drop-shadow-lg rounded-2xl mt-10 lg:mt-0">
           <form
-            className="w-full h-auto px-5 py-12 space-y-5 relative"
+            className="w-full h-auto px-5 py-12 space-y-5 relative text-sm lg:text-base"
             action=""
           >
-            <div className="w-full flex gap-5">
+            <div className="w-full flex flex-col lg:flex-row gap-5">
               {/* First Name */}
               <motion.div
-                className="w-1/2"
+                className="w-full lg:w-1/2"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -126,7 +127,7 @@ const HomeFormSection = () => {
 
               {/* Last Name */}
               <motion.div
-                className="w-1/2"
+                className="w-full lg:w-1/2"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
@@ -172,7 +173,7 @@ const HomeFormSection = () => {
               </label>
               <textarea
                 className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                rows="4"
+                rows="5"
                 required
               ></textarea>
             </motion.div>

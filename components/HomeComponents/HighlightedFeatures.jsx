@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import videoToAR from "@/public/HomeImages/videoToAR.svg";
@@ -13,6 +13,7 @@ import menuEffect from "@/public/HomeImages/menuEffect.svg";
 import reviewRewards from "@/public/HomeImages/reviewRewards.svg";
 import noDownload from "@/public/HomeImages/noDownload.svg";
 import iphoneImg from "@/public/HomeImages/iphone-img.png";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const HighlightedFeatures = () => {
   const leftFeatures = [
@@ -66,13 +67,29 @@ const HighlightedFeatures = () => {
     },
   ];
 
+  const allFeatures = [...leftFeatures, ...rightFeatures];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === allFeatures.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? allFeatures.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <section className="w-full h-auto py-20">
-      <div className="w-full width-container mx-auto flex flex-col items-center px-14">
+      <div className="w-full width-container mx-auto flex flex-col items-center px-3 lg:px-14">
         {/* title & description */}
         <div className="flex flex-col items-center">
           <motion.h3
-            className="text-4xl font-bold"
+            className="text-2xl lg:text-4xl font-bold"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -81,7 +98,7 @@ const HighlightedFeatures = () => {
             Highlighted Features
           </motion.h3>
           <motion.h6
-            className="w-[70%] text-center py-7"
+            className="w-full lg:w-[70%] text-sm lg:text-base text-center py-5 lg:py-7"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -95,28 +112,28 @@ const HighlightedFeatures = () => {
         </div>
 
         {/* Features and image */}
-        <div className="w-full h-auto flex items-center justify-center px-5">
+        <div className="w-full h-auto flex flex-col lg:flex-row items-center justify-center px-0 sm:px-5">
           {/* image carousel slider */}
           <div className="w-[50%]">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 50 }} 
-              whileInView={{ opacity: 1, scale: 1, y: 0 }} 
-              transition={{ duration: 0.6, ease: "easeOut" }} 
-              viewport={{ once: true, amount: 0.3 }} 
+              initial={{ opacity: 0, scale: 0.8, y: 50 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <Image src={iphoneImg} alt="Iphone-Img" />
             </motion.div>
           </div>
 
-          {/* Features */}
-          <div className="w-[50%] h-auto flex justify-center items-start">
+          {/* Features for desktop view */}
+          <div className="hidden w-full lg:w-[50%] h-auto lg:flex justify-center items-start pt-8 lg:pt-0">
             {/* Left Features */}
-            <div className="w-[50%] border-r-[2px] border-black border-dashed">
+            <div className="w-full lg:w-[50%] border-r-[2px] border-black border-dashed">
               {leftFeatures.map((feature, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -50 }} 
-                  whileInView={{ opacity: 1, x: 0 }} 
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{
                     duration: 0.6,
                     ease: "easeOut",
@@ -137,7 +154,7 @@ const HighlightedFeatures = () => {
             </div>
 
             {/* right Features */}
-            <div className="w-[50%]">
+            <div className="w-full lg:w-[50%]">
               {rightFeatures.map((feature, i) => (
                 <motion.div
                   key={i}
@@ -178,6 +195,39 @@ const HighlightedFeatures = () => {
                   How It's Work
                 </motion.button>
               </motion.div>
+            </div>
+          </div>
+
+          {/* Features for Tab And Mobile view (Horizontal Scroll) */}
+          <div className="w-full flex items-center overflow-x-scroll gap-4 lg:hidden  scrollbar-hide py-10 px-4">
+            {allFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="min-w-[240px] h-52 bg-white drop-shadow-lg rounded-lg flex flex-col items-start justify-center text-center p-6 border-[1px] border-gray-200 "
+              >
+                <Image
+                  alt={feature.title}
+                  src={feature.img}
+                  className="w-9 h-9 mb-3"
+                />
+                <h4 className="font-semibold text-base">{feature.title}</h4>
+                <h6 className="text-sm text-start pt-2">{feature.desc}</h6>
+              </motion.div>
+            ))}
+            <div className="flex w-72 items-center justify-center">
+            <motion.button
+              className="uppercase w-full h-fit text-nowrap px-6 py-3 text-white bg-secondary rounded-md my-3 text-sm"
+              initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+            >
+              How It's Work
+            </motion.button>
             </div>
           </div>
         </div>

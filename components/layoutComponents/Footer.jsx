@@ -37,14 +37,14 @@ const Footer = () => {
         alt="footer-bg"
       />
       <div className="relative bg-black w-full h-full opacity-95 p-8">
-        <div className="w-full width-container h-auto mx-auto flex justify-between items-center pt-14">
+        <div className="w-full width-container h-auto mx-auto flex flex-col items-center lg:flex-row lg:justify-between lg:items-center pt-6 md:pt-14">
           {/* Logo & Description */}
-          <div className="w-1/3 pr-5">
-            <div className="flex gap-10 justify-start">
-              <Image src={BrandMark} alt="brandmark" />
-              <Image src={LetterMark} alt="lettermark" />
+          <div className="w-full lg:w-1/3 pr-5">
+            <div className="flex justify-center gap-5 lg:gap-10 md:justify-start">
+              <Image className="h-16 md:h-28 w-auto" src={BrandMark} alt="brandmark" />
+              <Image className="h-16 md:h-28 w-auto" src={LetterMark} alt="lettermark" />
             </div>
-            <h4 className="text-white text-sm pt-12">
+            <h4 className="text-white text-sm pt-6 md:pt-12">
               Spoontoo is a food platform that allows Video to Augmented Reality
               creation for with the help of AI.
               <br />
@@ -66,9 +66,9 @@ const Footer = () => {
           </div>
 
           {/* Sitemaps */}
-          <div className="w-[65%] flex items-center">
+          <div className="w-full lg:w-[65%] h-auto flex items-start lg:items-center justify-start flex-wrap pt-14 lg:pt-0">
             {/* /list 1 */}
-            <div className="w-1/3 flex justify-center">
+            <div className="w-36 lg:w-1/3 flex justify-start lg:justify-center text-sm md:text-base">
               <ul className="flex flex-col items-start space-y-6 text-white">
                 {sitemapList1.map((link) => (
                   <li key={link.path}>
@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
 
             {/* list 2 */}
-            <div className="w-1/3 flex justify-center">
+            <div className="w-36 lg:w-1/3 flex justify-start lg:justify-center text-sm md:text-base">
               <ul className="flex flex-col items-start space-y-6 text-white">
                 {sitemapList2.map((link) => (
                   <li key={link.path}>
@@ -104,8 +104,8 @@ const Footer = () => {
             </div>
 
             {/* info */}
-            <div className="w-1/3 flex justify-center">
-              <ul className="flex flex-col items-start space-y-5 text-white">
+            <div className="w-full max-w-xs lg:w-1/3 flex justify-start lg:justify-center sm:pl-8 lg:pl-0">
+              <ul className="flex flex-col items-start space-y-5 text-[#FFFFFF] text-sm md:text-base pt-14 scroll-m-5 sm:pt-0">
                 <li className="flex items-start justify-center gap-4">
                   <Image src={locationIcon} alt="location-icon" />
                   <h6 className="font-normal">
@@ -150,7 +150,7 @@ const Footer = () => {
         <div className="w-full width-container mx-auto h-[1px] bg-[#AAAAAA] mt-14"></div>
 
         {/* Copyright */}
-        <h4 className="w-full width-container mx-auto text-center text-white py-8">
+        <h4 className="w-full width-container mx-auto text-center text-white py-8 text-xs md:text-sm">
           Copyright © <span className="text-secondary">Spoontoo</span> 2025 |
           All Rights Reserved
         </h4>
