@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const JoinUs = () => {
   return (
     <section className="w-full h-auto pt-10 pb-28">
-      <div className="w-full width-container mx-auto px-14 flex flex-col items-center justify-center">
+      <div className="w-full width-container mx-auto px-5 sm:px-14 flex flex-col items-center justify-center">
         <motion.h2
           className="text-3xl font-semibold text-center"
           initial={{ opacity: 0, y: 50 }}

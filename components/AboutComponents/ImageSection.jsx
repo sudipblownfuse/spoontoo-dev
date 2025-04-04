@@ -13,26 +13,31 @@ const images = [img1, img2, img3, img4, img5];
 const ImageSection = () => {
   return (
     <section className="w-full h-auto py-14">
-      <div className="w-full mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-6">
-  {images.map((img, index) => (
-    <motion.div
-      key={index}
-      className={`relative w-full overflow-hidden rounded-xl shadow-lg 
-        ${index === 2 ? "mt-8" : index % 3 === 0 ? "mt-6" : "mt-0"} 
-        ${index % 2 === 0 ? "h-40 md:h-52" : "h-52 md:h-64"}`}
-      initial={{ opacity: 0, scale: 0.5 }} // Starts small in the center
-      whileInView={{ opacity: 1, scale: 1 }} // Expands smoothly to normal size
-      transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
-      viewport={{ once: true }} // Triggers once per scroll
-    >
-      <Image
-        src={img}
-        alt={`Image ${index + 1}`}
-        className="w-full h-full object-cover"
-      />
-    </motion.div>
-  ))}
-</div>
+      <div className="px-6 lg:px-0 width-container mx-auto">
+        {/* Horizontal scroll for mobile & tablet, grid for large screens */}
+        <div className="flex lg:grid lg:grid-cols-5 gap-x-4 lg:gap-x-6 overflow-x-auto scrollbar-hide pr-6">
+          {images.map((img, index) => (
+            <motion.div
+              key={index}
+              className={`
+                relative flex-shrink-0 min-w-[13rem] sm:min-w-[15rem] overflow-hidden rounded-xl shadow-lg
+                ${index === 2 ? "lg:mt-8" : index % 3 === 0 ? "lg:mt-6" : "lg:mt-0"} 
+                h-40 md:h-52 lg:h-auto
+              `}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src={img}
+                alt={`Image ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

@@ -77,22 +77,27 @@ const BriefHistory = () => {
 
   return (
     <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-5 relative">
-      <div className="w-full width-container px-14">
-        <h2 className="text-4xl font-semibold text-white py-10">
+      <div className="w-full width-container px-5 md:px-14">
+        <h2 className=" text-3xl md:text-4xl font-semibold text-white pt-10 md:pb-10 text-center md:text-start">
           A Brief History
         </h2>
       </div>
 
-      <div className="w-full width-container mx-auto relative px-20 py-6">
-        <div className="mx-20 absolute h-[1px] bg-white top-32 inset-0"></div>
+      <div className="w-full width-container mx-auto relative px-5 md:px-20 py-6">
+        <div className="mx-5 md:mx-20 absolute h-[1px] bg-white top-32 inset-0"></div>
         <Swiper
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={30}
           pagination={{ clickable: true, el: ".custom-pagination" }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
+          breakpoints={{
+            350: {slidesPerView: 2},
+            640: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
           className="w-full px-10 my-14"
           onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
           onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
@@ -100,12 +105,12 @@ const BriefHistory = () => {
           {historyData2.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="w-56 text-white flex flex-col items-start gap-4">
-                <h4 className="text-xl font-semibold">{item.Year}</h4>
-                <div className="h-3 w-3 rounded-full bg-secondary"></div>
-                <h6 className="inline-block text-black font-light px-3 py-1 bg-white rounded-full">
+                <h4 className="text-base sm:text-xl font-semibold">{item.Year}</h4>
+                <div className="h-3 w-3 rounded-full bg-secondary mt-1 sm:mt-0"></div>
+                <h6 className="inline-block text-black font-light text-xs sm:text-sm md:text-base px-3 py-1 bg-white rounded-full">
                   {item.month}
                 </h6>
-                <h6 className="text-gray-300">{item.description}</h6>
+                <h6 className="w-[70%] sm:w-[80%] lg:w-full text-gray-300 text-sm lg:text-base">{item.description}</h6>
               </div>
             </SwiperSlide>
           ))}
@@ -113,13 +118,13 @@ const BriefHistory = () => {
 
         {/* Custom Navigation Buttons */}
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 text-red-500 rounded-full shadow-lg"
+          className="absolute  -left-4 sm:left-0 top-1/2 transform -translate-y-1/2 z-10 text-red-500 rounded-full shadow-lg"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <FaAngleLeft size={24} />
         </button>
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-red-500 rounded-full shadow-lg"
+          className="absolute -right-4 sm:right-0 top-1/2 transform -translate-y-1/2 z-10 text-red-500 rounded-full shadow-lg"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <FaAngleRight size={24} />
