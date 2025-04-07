@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const WhatYouNeedToDo = () => {
   return (
     <section className="w-full h-auto pt-10">
-      <div className="w-full width-container mx-auto px-14 flex flex-col items-center">
+      <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         <motion.h2
-        className="text-center text-3xl font-semibold"
+        className="text-center text-2xl lg:text-3xl font-semibold"
         initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -16,7 +16,7 @@ const WhatYouNeedToDo = () => {
         >
           What you Need to do
         </motion.h2>
-        <motion.h6 className="w-[65%] text-center py-5"
+        <motion.h6 className="w-[93%] sm:w-[85%] lg:w-[65%] text-center py-5 text-sm sm:text-base"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}

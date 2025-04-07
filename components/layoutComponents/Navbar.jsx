@@ -18,8 +18,8 @@ const Navbar = () => {
     { name: "How It's Work", path: "/how-it-works" },
     { name: "Blog", path: "/blog" },
     { name: "Pricing", path: "/pricing" },
-    { name: "Contact", path: "/contact" },
     { name: "Career", path: "/career" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -49,9 +49,7 @@ const Navbar = () => {
                     href={link.path}
                     onClick={toggleMenu}
                     className={`block font-normal text-sm uppercase hover:text-secondary ${
-                      pathname === link.path
-                        ? "text-secondary"
-                        : "text-white"
+                      pathname === link.path ? "text-secondary" : "text-white"
                     }`}
                   >
                     {link.name}
@@ -93,14 +91,14 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-start space-y-6 px-6 py-10">
           {navLinks.map((link) => (
-            <li key={link.path}
-             className=""
-            >
+            <li key={link.path} className="">
               <Link
                 href={link.path}
                 onClick={toggleMenu} // Close menu on click
                 className={` block w-full font-normal py-2-1 text-base border-b-[1px] uppercase hover:text-secondary hover:border-secondary ${
-                  pathname === link.path ? "text-secondary border-secondary" : "text-white "
+                  pathname === link.path
+                    ? "text-secondary border-secondary"
+                    : "text-white "
                 }`}
               >
                 {link.name}

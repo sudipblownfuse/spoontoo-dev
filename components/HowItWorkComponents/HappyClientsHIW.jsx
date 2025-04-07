@@ -67,12 +67,12 @@ const HappyClientsHIW = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto flex flex-col justify-start items-center my-10 px-14">
-      <h3 className="text-4xl font-semibold text-black pt-10 pb-6">
+    <section className="w-full h-auto flex flex-col justify-start items-center my-4 sm:my-10 px-5 md:px-14">
+      <h3 className=" text-3xl lg:text-4xl font-semibold text-black pt-0 sm:pt-10 pb-6 text-center md:text-start">
         Our Happy Clients
       </h3>
 
-      <div className="w-full width-container mx-auto relative px-20">
+      <div className="w-full width-container mx-auto relative px-5 lg:px-20">
         <Swiper
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
@@ -90,7 +90,7 @@ const HappyClientsHIW = () => {
           {clientData.map((story, index) => (
             <SwiperSlide key={story.id}>
               <motion.div
-                className="flex flex-col items-start p-7 border-[3px] border-gray-600 rounded-2xl rounded-tr-[100px] hover:cursor-pointer transition-all my-10"
+                className="flex flex-col items-start p-7 border-[2px] border-gray-600 rounded-2xl rounded-tr-[100px] hover:cursor-pointer transition-all my-10"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -115,7 +115,7 @@ const HappyClientsHIW = () => {
                     </h5>
                   </div>
                 </div>
-                <h6 className="py-5">{story.comment}</h6>
+                <h6 className="py-5 text-sm sm:text-base">{story.comment}</h6>
               </motion.div>
             </SwiperSlide>
           ))}
@@ -126,13 +126,13 @@ const HappyClientsHIW = () => {
 
         {/* Custom Navigation Buttons */}
         <button
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 text-gray-500"
+          className="absolute -left-5 md:left-6 top-1/2 transform -translate-y-1/2 z-10 text-gray-500"
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <FaAngleLeft size={24} />
         </button>
         <button
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-10 text-gray-500"
+          className="absolute -right-5 md:right-6 top-1/2 transform -translate-y-1/2 z-10 text-gray-500"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <FaAngleRight size={24} />
