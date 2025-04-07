@@ -62,12 +62,12 @@ const ClanMembers = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto flex flex-col justify-start items-center bg-[#2F2F2F] mt-10 px-14">
-      <h3 className="text-4xl font-semibold text-white pt-10 pb-6">
+    <section className="w-full h-auto flex flex-col justify-start items-center bg-[#2F2F2F] mt-10 px-0 lg:px-14">
+      <h3 className=" w-[80%] lg:w-full text-3xl lg:text-4xl font-semibold text-white pt-10 pb-6 text-center lg:text-start">
         From our clan members
       </h3>
 
-      <div className="w-full width-container mx-auto relative px-20">
+      <div className="w-full width-container mx-auto relative px-5 lg:px-20">
         <Swiper
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
@@ -96,10 +96,10 @@ const ClanMembers = () => {
                 viewport={{ once: true }}
               >
                 {/* quote / comment */}
-                <div className="w-1/2 flex flex-col items-center justify-center relative p-5">
-                  <h6 className=" text-center text-gray-300">{item.comment}</h6>
-                  <ImQuotesLeft className="text-secondary absolute -left-8 -top-3 text-5xl" />
-                  <ImQuotesRight className="text-secondary absolute -right-6 bottom-0 text-5xl" />
+                <div className="w-full lg:w-1/2 flex flex-col items-center justify-center relative p-5">
+                  <h6 className=" text-center text-gray-300 text-xs sm:text-sm md:text-base">{item.comment}</h6>
+                  <ImQuotesLeft className="text-secondary absolute -left-3 lg:-left-8 -top-3 text-3xl lg:text-5xl" />
+                  <ImQuotesRight className="text-secondary absolute -right-3 lg:-right-6 bottom-0 text-3xl lg:text-5xl" />
                 </div>
 
                 {/* Name & Image */}
@@ -119,13 +119,13 @@ const ClanMembers = () => {
 
         {/* Custom Navigation Buttons */}
         <button
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary"
+          className="hidden lg:flex absolute left-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary "
           onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <FaAngleLeft size={24} />
         </button>
         <button
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary"
+          className="hidden lg:flex absolute right-6 top-1/2 transform -translate-y-1/2 z-10 text-secondary"
           onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <FaAngleRight size={24} />

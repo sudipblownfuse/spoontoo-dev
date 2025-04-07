@@ -18,22 +18,49 @@ const CareerImgSection = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto flex flex-col justify-start items-center mt-24 px-14">
-      <h3 className="w-full width-container px-14 text-4xl font-semibold text-black pt-10 pb-6 text-start">
+    <section className="w-full h-auto flex flex-col justify-start items-center mt-24 px-6 md:px-14">
+      <h3 className="w-full width-container px-0 md:px-5 lg:px-14 text-xl sm:text-2xl lg:text-4xl font-semibold text-black pt-10 pb-6 text-center sm:text-start">
         We Work Hard, Party Harder
       </h3>
 
-      <div className="w-full width-container mx-auto relative px-10">
+      {/* Mobile View - Horizontal Scroll */}
+      <div className="w-full md:hidden overflow-x-auto scrollbar-hide">
+        <div className="flex gap-4 px-2">
+          {images.map((item, index) => (
+            <motion.div
+              key={index}
+              className="min-w-[220px] h-56 flex-shrink-0"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src={item}
+                alt={`image${index + 1}`}
+                width={220}
+                height={220}
+                className="h-full w-full object-cover rounded-2xl"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop View - Swiper */}
+      <div className="hidden md:block w-full width-container mx-auto relative px-0 md:px-10">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay]}
           slidesPerView={1}
           spaceBetween={30}
-          pagination={{ clickable: false }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
           breakpoints={{
-            640: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
           }}
           className="w-full"
@@ -49,7 +76,6 @@ const CareerImgSection = () => {
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
-                  delay: index * 0.1,
                 }}
                 viewport={{ once: true }}
               >
@@ -66,7 +92,7 @@ const CareerImgSection = () => {
         </Swiper>
 
         {/* Navigation Buttons */}
-        <div className="absolute -top-16 right-14 flex gap-2">
+        <div className="absolute -top-16 right-14 gap-2 hidden lg:flex">
           <button
             className="p-3 bg-secondary text-white rounded-full hover:bg-[#bd3131]"
             onClick={() => swiperRef.current.swiper.slidePrev()}

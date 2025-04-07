@@ -39,11 +39,11 @@ const FourSpheres = () => {
 
   return (
     <section className="w-full h-auto py-10">
-      <div className="w-full width-container mx-auto px-14 flex flex-col items-center">
+      <div className="w-full width-container mx-auto px-3 md:px-14 flex flex-col items-center">
         {/* Heading section */}
-        <div className="w-[60%] flex flex-col items-center">
+        <div className="w-[90%] lg:w-[60%] flex flex-col items-center">
           <motion.h3
-            className="text-4xl font-semibold text-center"
+            className="text-2xl lg:text-4xl font-semibold text-center"
             initial={{ y: 80, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -52,7 +52,7 @@ const FourSpheres = () => {
             Spoontoo’s Four Spheres <br /> Of Influence
           </motion.h3>
           <motion.h6
-            className="text-center py-4"
+            className="text-center py-4 text-sm sm:text-base"
             initial={{ y: 80, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -64,7 +64,7 @@ const FourSpheres = () => {
         </div>
 
         {/* ---------------------- CARDS section ---------------------- */}
-        <div className="w-full flex flex-row justify-between flex-wrap gap-3 py-8">
+        <div className="w-full flex flex-row justify-between gap-3 py-8 overflow-x-auto scrollbar-hide">
           {data.map((item, index) => (
             <motion.div
               key={index}
@@ -81,7 +81,7 @@ const FourSpheres = () => {
             >
               <Image src={item.img} alt="icon-img" />
               <h5 className="text-center text-lg font-bold">{item.title}</h5>
-              <h6 className="font-normal text-center text-sm">
+              <h6 className="w-[270px] p-6 font-normal text-center text-sm">
                 {item.description}
               </h6>
             </motion.div>
