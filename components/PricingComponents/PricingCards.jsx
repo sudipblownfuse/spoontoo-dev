@@ -49,11 +49,11 @@ const PricingCards = ({ isYearly }) => {
   ];
 
   return (
-    <div className="w-full width-container mx-auto px-10 flex justify-center items-center pt-16 pb-24">
+    <div className="w-full width-container mx-auto px-10 flex flex-col lg:flex-row justify-center items-center pt-16 pb-24">
       {packageData.map((item, index) => (
         <motion.div
           key={index}
-          className={`w-1/3 h-[540px] bg-white ${
+          className={`w-full sm:w-[60%] lg:w-1/3 h-[490px] sm:h-[540px] mt-7 bg-white ${
             index === 1 && "h-[640px]"
           } rounded-3xl flex flex-col justify-between items-center border-[2px] border-gray-300 ${
             index === 1 && "z-10 border-[3px] border-secondary"
@@ -61,6 +61,7 @@ const PricingCards = ({ isYearly }) => {
           initial={animations[index].initial}
           animate={animations[index].animate}
           transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.2 }}
+          viewport={{once: true, amount:0.4}}
           whileHover={{ scale: 1.05 }}
         >
           {/* Top section */}
@@ -69,7 +70,7 @@ const PricingCards = ({ isYearly }) => {
             <div className="h-[1px] w-[80%] bg-[#464646]"></div>
             <div className="w-full flex flex-col items-center gap-3 pt-5">
               {item.offerings.map((offer, i) => (
-                <h5 key={i} className="font-semibold text-gray-600">
+                <h5 key={i} className="font-semibold text-gray-600 text-sm sm:text-base">
                   {offer}
                 </h5>
               ))}
@@ -82,7 +83,7 @@ const PricingCards = ({ isYearly }) => {
               ${isYearly ? item.price : ((item.price / 12) * 1.4).toFixed()}.00
             </h5>
             <button
-              className={`uppercase w-fit px-6 py-3 rounded-md my-3 ${
+              className={`uppercase w-fit px-6 py-3 rounded-md my-3 text-sm sm:text-base ${
                 index === 1
                   ? "text-white bg-secondary transform transition-all hover:scale-110 duration-300 ease-in-out"
                   : "text-secondary border-[2px] border-secondary transform transition-all hover:bg-secondary hover:text-white duration-300 ease-linear"

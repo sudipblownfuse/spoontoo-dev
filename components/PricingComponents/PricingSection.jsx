@@ -33,7 +33,7 @@ const PricingSection = () => {
           </div>
           <h5 className={`px-4 py-2 text-xl font-semibold`}>Yearly</h5>
           {/* Yearly Offer */}
-          <div className="absolute flex justify-center -right-[60%]">
+          <div className="absolute flex justify-center -bottom-12 sm:-right-[60%] sm:bottom-2">
             <h6 className="relative text-sm px-4 py-1 bg-yellow-300 rounded-full drop-shadow-md">
               Save 40% yearly
             </h6>

@@ -48,10 +48,10 @@ const Navbar = () => {
                   <Link
                     href={link.path}
                     onClick={toggleMenu}
-                    className={`block font-normal text-white text-sm uppercase hover:text-secondary ${
-                      pathname === link.path || pathname.startsWith(link.path)
+                    className={`block font-normal text-sm uppercase hover:text-secondary ${
+                      pathname === link.path
                         ? "text-secondary"
-                        : ""
+                        : "text-white"
                     }`}
                   >
                     {link.name}
