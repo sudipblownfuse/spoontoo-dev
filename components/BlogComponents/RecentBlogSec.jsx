@@ -10,12 +10,12 @@ const RecentBlogSec = ({ recentBlogs }) => {
   const otherRecentBlogs = recentBlogs.slice(1, 4);
 
   return (
-    <section className="w-full h-auto pt-32 pb-10">
-      <div className="w-full width-container relative mx-auto px-14 flex flex-col items-center">
+    <section className="hidden w-full h-auto pt-32 pb-10 sm:flex justify-center">
+      <div className="w-full width-container relative mx-auto px-5 lg:px-14 flex flex-col items-center">
         {/* Heading */}
-        <div className="absolute w-full px-14">
+        <div className="absolute w-full px-5 lg:px-14">
           <motion.h2
-            className="w-full relative text-4xl font-semibold text-start"
+            className="w-full relative text-2xl lg:text-4xl font-semibold text-start bottom-9 lg:bottom-0"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -30,7 +30,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
           {/* --------------- Highlighted Blog ------------ */}
           <div className="w-1/2 pr-4 flex flex-col items-start">
             <motion.div
-              className="w-full h-96 rounded-3xl"
+              className="w-full h-44 lg:h-96 rounded-3xl"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -45,7 +45,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
 
             <div className="flex flex-col justify-start relative ">
               <motion.h4
-                className="w-[85%] text-xl font-semibold py-4"
+                className="w-[75%] lg:w-[85%] text-sm lg:text-xl font-semibold py-4"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -54,7 +54,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
                 {highlightedBlog.title}
               </motion.h4>
               <motion.h6
-                className="w-[95%] pt-4"
+                className="w-[95%] pt-2 lg:pt-4 text-xs lg:text-base"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -72,7 +72,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
                 {highlightedBlog.categories.map((category, i) => (
                   <p
                     key={i}
-                    className="text-sm text-white bg-secondary px-4 py-1 rounded-full"
+                    className="text-xs lg:text-sm text-white bg-secondary px-4 py-1 rounded-full"
                   >
                     {category}
                   </p>
@@ -86,8 +86,8 @@ const RecentBlogSec = ({ recentBlogs }) => {
               viewport={{ once: true, amount: 0.5 }}
               >
               <HiMiniArrowUturnRight
-                size={50}
-                className="relative p-3 rounded-full text-gray-300 bg-gray-600  cursor-pointer 
+                
+                className="w-9 lg:w-12 h-9 lg:h-12 relative p-2 lg:p-3 rounded-full text-gray-300 bg-gray-600  cursor-pointer 
                 transform transition-all hover:bg-black hover:text-secondary duration-300 ease-in-out"
               />
               </motion.div>
@@ -100,7 +100,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
             {otherRecentBlogs.map((blog, index) => (
               <motion.div
                 key={index}
-                className="w-full h-auto p-4 bg-white drop-shadow-xl flex justify-between rounded-2xl cursor-pointer"
+                className="w-full h-auto p-3 lg:p-4 bg-white drop-shadow-xl flex justify-between rounded-2xl cursor-pointer"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -115,7 +115,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
                 }}
               >
                 {/* image */}
-                <div className="w-[36%] h-44 object-cover rounded-2xl">
+                <div className="w-[36%] h-20 lg:h-44 object-cover rounded-2xl">
                   <Image
                     className="h-full w-full object-cover rounded-2xl"
                     src={blog.image}
@@ -124,14 +124,14 @@ const RecentBlogSec = ({ recentBlogs }) => {
                 </div>
                 {/* Details */}
                 <div className="w-[60%] h-auto flex flex-col items-start pl-2">
-                  <h5 className="font-semibold">{blog.title}</h5>
-                  <h6 className="text-sm py-2">{blog.description}</h6>
+                  <h5 className="font-semibold text-xs lg:text-base">{blog.title}</h5>
+                  <h6 className="w-full text-xs lg:text-sm py-2 truncate lg:text-pretty">{blog.description}</h6>
                   {/* categories */}
-                  <div className="flex justify-start items-center gap-4">
+                  <div className="flex justify-start items-center gap-1 lg:gap-4">
                     {blog.categories.map((category, i) => (
                       <p
                         key={i}
-                        className="text-xs text-white bg-secondary px-4 py-1 rounded-full"
+                        className="text-[8px] lg:text-xs text-white bg-secondary px-2 lg:px-4 py-1 rounded-full"
                       >
                         {category}
                       </p>

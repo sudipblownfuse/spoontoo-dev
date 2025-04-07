@@ -27,14 +27,18 @@ const AllBlogsSec = ({ allBlogs }) => {
   const currentBlogs = allBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   return (
-    <section className="w-full h-auto pt-16">
-      <div className="w-full width-container mx-auto px-12 flex flex-col justify-start">
-        {/* --------------- heading --------------- */}
-        <h2 className="w-full px-6 text-start text-3xl font-bold py-6">
+    <section className="w-full h-auto pt-8 lg:pt-16">
+      <div className="w-full width-container mx-auto px-2 lg:px-12 flex flex-col justify-start">
+        {/* --------------- heading (Desktop & Tablet) --------------- */}
+        <h2 className="hidden sm:flex w-full px-6 text-start text-2xl lg:text-3xl font-bold py-6">
           All Blogs
         </h2>
+{/* Heading for Mobile View */}
+        <h2 className="flex w-full px-6 text-start text-2xl font-bold py-6 sm:hidden">
+          Recent Blog Post
+        </h2>
 
-        {/* ------------------------ Blog Card Section --------------------- */}
+        {/* ------------------------ Blog Card Section (Desktop & Tablet) --------------------- */}
         <motion.div
           key={currentPage}
           className="w-full h-auto flex justify-center flex-wrap gap-4"
@@ -47,7 +51,7 @@ const AllBlogsSec = ({ allBlogs }) => {
             {currentBlogs.map((blog, index) => (
               <motion.div
               key={index}
-              className="w-[30%] px-4 pb-8 pt-3 bg-white drop-shadow-md rounded-3xl flex flex-col items-start 
+              className="w-[92%] sm:w-[48%] lg:w-[30%] px-4 pb-8 pt-3 bg-white drop-shadow-md rounded-3xl flex flex-col items-start 
               transform transition-all ease-in-out"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -66,12 +70,12 @@ const AllBlogsSec = ({ allBlogs }) => {
                 <h4 className="w-full text-lg font-semibold py-3">
                   {blog.title}
                 </h4>
-                <h6 className="w-full text-sm">{blog.description}</h6>
-                <div className="w-full flex justify-start gap-3 pt-3">
+                <h6 className="w-full text-sm text-pretty">{blog.description}</h6>
+                <div className="w-full flex justify-start gap-2 pt-3">
                   {blog.categories.map((category, i) => (
                     <p
                       key={i}
-                      className="text-xs text-white bg-secondary px-3 py-1 rounded-full"
+                      className="text-[10px] text-white bg-secondary px-3 py-1 rounded-full"
                     >
                       {category}
                     </p>
@@ -83,15 +87,17 @@ const AllBlogsSec = ({ allBlogs }) => {
           </AnimatePresence>
         </motion.div>
 
+    
+
         {/* ------------------------ Pagination Controls ---------------------- */}
         <div className="w-[90%] flex justify-between gap-3 py-10 mx-auto">
           <button
-            className="px-4 py-2 border-[2px] border-black text-black rounded-md disabled:opacity-50 flex justify-start items-center gap-2"
+            className="px-1 sm:px-4 py-2 border-[2px] border-black text-black rounded-md disabled:opacity-50 flex justify-start items-center gap-2"
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
           >
             <FaChevronLeft/>
-            <span>Previous</span>
+            <span className="hidden sm:flex">Previous</span>
           </button>
 
           <div className="">
@@ -109,11 +115,11 @@ const AllBlogsSec = ({ allBlogs }) => {
           </div>
 
           <button
-            className="px-4 py-2 border-[2px] border-black text-black rounded-md disabled:opacity-50 flex justify-end items-center gap-2"
+            className="px-1 sm:px-4 py-2 border-[2px] border-black text-black rounded-md disabled:opacity-50 flex justify-end items-center gap-2"
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
           >
-            <span>Next</span>
+            <span className="hidden sm:flex">Next</span>
             <FaChevronRight/>
           </button>
         </div>
