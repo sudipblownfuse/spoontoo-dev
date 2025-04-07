@@ -44,7 +44,7 @@ const TopSection = () => {
           <motion.div className="w-full sm:w-1/2 h-auto"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
           >
             <div className="w-full sm:w-[90%]">
