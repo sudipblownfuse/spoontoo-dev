@@ -56,9 +56,9 @@ const FAQ = () => {
 
   return (
     <section className="w-full h-auto bg-[#101010] py-16 mt-20">
-      <div className="w-full width-container mx-auto px-14 flex justify-center items-start">
+      <div className="w-full width-container mx-auto px-5 lg:px-14 flex justify-center items-start">
         {/* CEO */}
-        <div className="w-[40%] ">
+        <div className="w-[40%] hidden lg:flex">
           <motion.div
             className="w-[80%] border-[2px] rounded-xl rounded-tr-[80px] border-gray-400 p-10 flex flex-col items-start"
             initial="hidden"
@@ -101,9 +101,9 @@ const FAQ = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="w-[60%] text-white">
+        <div className="w-full lg:w-[60%] text-white">
           <motion.h3
-            className="text-3xl font-semibold mb-6"
+            className="text-3xl font-semibold mb-6 text-center lg:text-start"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -129,7 +129,7 @@ const FAQ = () => {
                 }`}
               >
                 <button
-                  className="w-full text-left font-semibold text-lg flex justify-between items-center py-2 focus:outline-none"
+                  className="w-full text-left font-semibold text-sm lg:text-lg flex justify-between items-center py-2 focus:outline-none"
                   onClick={() => toggleFAQ(index)}
                 >
                   {faq.question}
@@ -144,7 +144,7 @@ const FAQ = () => {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="mt-2">{faq.answer}</p>
+                  <p className="mt-2 text-sm lg:text-base">{faq.answer}</p>
                 </div>
               </motion.div>
             ))}

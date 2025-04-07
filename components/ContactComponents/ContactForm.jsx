@@ -7,10 +7,11 @@ import contact2 from "@/public/contact/contact2.png";
 
 const ContactForm = () => {
   return (
-    <section className="w-fulll h-auto pt-20 pb-14">
-      <div className="w-full width-container mx-auto px-14 flex justify-between">
+    <section className="w-fulll h-auto pt-5 lg:pt-20 pb-14">
+      <div className="w-full width-container mx-auto px-5 sm:px-14 flex flex-col lg:flex-row items-center lg:items-start justify-between">
+        
         {/* Text-section */}
-        <div className="w-[40%] h-auto flex flex-col items-start gap-10">
+        <div className="w-full lg:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4">
           {/* Heading */}
           <motion.h3
             className="text-3xl font-semibold"
@@ -24,6 +25,7 @@ const ContactForm = () => {
 
           {/* Subtext */}
           <motion.h6
+          className="text-sm sm:text-base text-center lg:text-start"
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -46,15 +48,15 @@ const ContactForm = () => {
         </div>
 
         {/* Form Section */}
-        <div className="w-[60%] h-[450px] mx-5 bg-white shadow-lg drop-shadow-lg rounded-2xl">
+        <div className="w-full lg:w-[60%] h-auto mx-5 bg-white shadow-lg drop-shadow-lg rounded-2xl">
           <form
             className="w-full h-auto px-5 py-12 space-y-5 relative"
             action=""
           >
-            <div className="w-full flex gap-5">
+            <div className="w-full flex flex-col lg:flex-row gap-5">
               {/* First Name */}
               <motion.div
-                className="w-1/2"
+                className="w-full lg:w-1/2"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -72,7 +74,7 @@ const ContactForm = () => {
 
               {/* Last Name */}
               <motion.div
-                className="w-1/2"
+                className="w-full lg:w-1/2"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
@@ -124,9 +126,9 @@ const ContactForm = () => {
             </motion.div>
 
             {/* Submit Button */}
-            <div className="absolute left-1/2 bottom-[-42px] transform -translate-x-1/2">
+            <div className="absolute w-full md:w-auto left-1/2 bottom-[-76px] md:bottom-[-36px] transform -translate-x-1/2">
               <motion.button
-                className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3 drop-shadow-md"
+                className="uppercase w-full md:w-fit px-6 py-3 text-white bg-secondary rounded-md my-3 drop-shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.5 }}
@@ -138,6 +140,7 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
+
       </div>
     </section>
   );
