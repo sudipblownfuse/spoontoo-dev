@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import navLogo from "@/public/navbar/nav-logo.png";
 import searchImg from "@/public/navbar/search.svg";
@@ -23,10 +23,29 @@ const Navbar = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -59,7 +78,7 @@ const Navbar = () => {
             </ul>
 
             <Link href="/">
-              <Image className="h-12 lg:h-14" src={searchImg} alt="search" />
+              <Image className="h-11 lg:h-14 " src={searchImg} alt="search" />
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -68,7 +87,7 @@ const Navbar = () => {
                 <IoCloseSharp
                   onClick={toggleMenu}
                   className="text-white cursor-pointer"
-                  size={39}
+                  size={32}
                 />
               ) : (
                 <Image
@@ -85,6 +104,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       <div
+        ref={menuRef}
         className={`fixed left-0 top-20 h-screen w-[70%] bg-[#101010] text-white z-20 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden shadow-lg`}

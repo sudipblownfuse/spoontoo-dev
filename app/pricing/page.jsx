@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <main className='w-full min-h-screen pt-28'>
+    <main className='w-full min-h-screen pt-28 overflow-x-clip'>
       <HeadingSection/>
       <PricingSection/>
     </main>
