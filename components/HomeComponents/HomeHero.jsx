@@ -43,13 +43,14 @@ const HomeHero = () => {
       const handleOrientation = (event) => {
         const gamma = event.gamma || 0;
         const beta = event.beta || 0;
-        mouseX.set(gamma / 3);
-        mouseY.set(beta / 3);
+  
+        // Increased sensitivity
+        mouseX.set(gamma * 1.5); // more left-right motion
+        mouseY.set(beta * 1.2);  // more up-down motion
       };
-
+  
       window.addEventListener("deviceorientation", handleOrientation, true);
-      return () =>
-        window.removeEventListener("deviceorientation", handleOrientation);
+      return () => window.removeEventListener("deviceorientation", handleOrientation);
     }
   }, []);
 
