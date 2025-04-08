@@ -55,7 +55,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="w-full h-auto bg-[#101010] py-16 mt-20">
+    <section className="w-full h-auto bg-[#101010] py-16 mt-6 md:mt-20">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex justify-center items-start">
         {/* CEO */}
         <div className="w-[40%] hidden lg:flex">

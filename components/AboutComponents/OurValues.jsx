@@ -36,7 +36,7 @@ const OurValues = () => {
         </motion.h3>
 
         <motion.h6
-          className="w-[90%] sm:w-[70%] text-center py-4 sm:py-8 text-sm sm:text-base"
+          className="w-[90%] sm:w-[70%] text-center py-2 sm:py-8 text-sm sm:text-base"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}

@@ -8,7 +8,7 @@ import topSectionImg from "@/public/how-it-works/topSection1.png";
 
 const CareetTopSec = () => {
   return (
-    <section className="w-full h-auto pt-8 md:pt-20">
+    <section className="w-full h-auto pt-4 md:pt-20">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         <motion.div
           className="w-full sm:w-[75%] lg:w-[60%] flex flex-col items-center"
@@ -25,7 +25,7 @@ const CareetTopSec = () => {
           </h5>
         </motion.div>
 
-        <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center pt-24">
+        <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center pt-14 sm:pt-24">
           {/* image */}
           <motion.div
             className="w-full sm:w-1/2 h-auto mt-7 sm:mt-0 flex justify-center sm:justify-start"
@@ -50,7 +50,7 @@ const CareetTopSec = () => {
             <h3 className="text-xl lg:text-3xl font-semibold text-center sm:text-start">
             What Makes Life At Spoontoo Different And Thriving?
             </h3>
-            <h6 className="pt-5 text-xs lg:text-base text-center sm:text-start">
+            <h6 className="pt-5 text-sm lg:text-base text-center sm:text-start">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printertook.

@@ -46,7 +46,7 @@ const ProcessFlow = () => {
 
   return (
     <section className="w-full h-auto pt-16 lg:pt-28 pb-12">
-      <div className="w-full width-container mx-auto px-0 lg:px-8">
+      <div className="w-full width-container mx-auto px-3 lg:px-8">
         {/* Section Heading */}
         <motion.h3
           className="text-3xl font-semibold text-center py-12"
@@ -59,14 +59,14 @@ const ProcessFlow = () => {
         </motion.h3>
 
         {/* Cards */}
-        <div className="w-full overflow-x-auto scrollbar-hide">
-          <div className="flex flex-nowrap gap-5 px-4 lg:px-8">
+        <div className="w-full overflow-x-auto scrollbar-hide ">
+          <div className="flex flex-nowrap gap-4 px-3 lg:px-8">
             {data.map((item, index) => (
               <motion.div
               key={index}
               style={{ backgroundColor: `${item.bg}` }}
               className="min-w-[220px] h-[350px] p-6 rounded-2xl flex flex-col gap-5 items-center"
-              initial={{ opacity: 0, x: -100 }}
+              
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 0.6,

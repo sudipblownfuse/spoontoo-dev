@@ -49,7 +49,7 @@ const PricingCards = ({ isYearly }) => {
   ];
 
   return (
-    <div className="w-full width-container mx-auto px-10 flex flex-col lg:flex-row justify-center items-center pt-16 pb-24">
+    <div className="w-full width-container mx-auto px-5 sm:px-10 flex flex-col lg:flex-row justify-center items-center pt-16 pb-24">
       {packageData.map((item, index) => (
         <motion.div
           key={index}
@@ -65,7 +65,7 @@ const PricingCards = ({ isYearly }) => {
           whileHover={{ scale: 1.05 }}
         >
           {/* Top section */}
-          <div className="w-full px-5 flex flex-col items-center">
+          <div className="w-full px-4 sm:px-5 flex flex-col items-center">
             <h3 className="text-2xl font-semibold py-6">{item.name}</h3>
             <div className="h-[1px] w-[80%] bg-[#464646]"></div>
             <div className="w-full flex flex-col items-center gap-3 pt-5">

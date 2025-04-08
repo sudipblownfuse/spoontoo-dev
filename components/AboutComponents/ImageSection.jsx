@@ -12,7 +12,7 @@ const images = [img1, img2, img3, img4, img5];
 
 const ImageSection = () => {
   return (
-    <section className="w-full h-auto py-14">
+    <section className="w-full h-auto py-10 md:py-14">
       <div className="px-6 lg:px-0 width-container mx-auto">
         {/* Horizontal scroll for mobile & tablet, grid for large screens */}
         <div className="flex lg:grid lg:grid-cols-5 gap-x-4 lg:gap-x-6 overflow-x-auto scrollbar-hide pr-6">

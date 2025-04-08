@@ -18,7 +18,7 @@ const CareerImgSection = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto flex flex-col justify-start items-center mt-24 px-6 md:px-14">
+    <section className="w-full h-auto flex flex-col justify-start items-center mt-8 md:mt-24 px-6 md:px-14">
       <h3 className="w-full width-container px-0 md:px-5 lg:px-14 text-xl sm:text-2xl lg:text-4xl font-semibold text-black pt-10 pb-6 text-center sm:text-start">
         We Work Hard, Party Harder
       </h3>

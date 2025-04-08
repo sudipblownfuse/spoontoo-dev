@@ -7,7 +7,7 @@ import contact2 from "@/public/contact/contact2.png";
 
 const ContactForm = () => {
   return (
-    <section className="w-fulll h-auto pt-5 lg:pt-20 pb-14">
+    <section className="w-fulll h-auto pt-4 lg:pt-20 pb-14">
       <div className="w-full width-container mx-auto px-5 sm:px-14 flex flex-col lg:flex-row items-center lg:items-start justify-between">
         
         {/* Text-section */}
@@ -126,7 +126,7 @@ const ContactForm = () => {
             </motion.div>
 
             {/* Submit Button */}
-            <div className="absolute w-full md:w-auto left-1/2 bottom-[-76px] md:bottom-[-36px] transform -translate-x-1/2">
+            <div className="absolute w-full md:w-auto left-1/2 bottom-[-85px] md:bottom-[-36px] transform -translate-x-1/2">
               <motion.button
                 className="uppercase w-full md:w-fit px-6 py-3 text-white bg-secondary rounded-md my-3 drop-shadow-md"
                 initial={{ opacity: 0, y: 30 }}

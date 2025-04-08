@@ -38,7 +38,7 @@ const FourSpheres = () => {
   ];
 
   return (
-    <section className="w-full h-auto py-10">
+    <section className="w-full h-auto py-5 sm:py-10">
       <div className="w-full width-container mx-auto px-3 md:px-14 flex flex-col items-center">
         {/* Heading section */}
         <div className="w-[90%] lg:w-[60%] flex flex-col items-center">
@@ -70,14 +70,13 @@ const FourSpheres = () => {
               key={index}
               style={{ backgroundColor: `${item.bg}` }}
               className="h-[350px] w-[270px] p-6 rounded-2xl flex flex-col gap-5 items-center"
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: 70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                delay: index * 0.2,
+                duration: 0.4,
+                ease: "easeOut"
               }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2}}
             >
               <Image src={item.img} alt="icon-img" />
               <h5 className="text-center text-lg font-bold">{item.title}</h5>

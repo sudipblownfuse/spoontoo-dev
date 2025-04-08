@@ -84,7 +84,7 @@ const HighlightedFeatures = () => {
   };
 
   return (
-    <section className="w-full h-auto py-20">
+    <section className="w-full h-auto pb-6 lg:py-20  ">
       <div className="w-full width-container mx-auto flex flex-col items-center px-3 lg:px-14">
         {/* title & description */}
         <div className="flex flex-col items-center">
@@ -199,28 +199,30 @@ const HighlightedFeatures = () => {
           </div>
 
           {/* Features for Tab And Mobile view (Horizontal Scroll) */}
-          <div className="w-full flex items-center overflow-x-scroll gap-4 lg:hidden  scrollbar-hide py-10 px-4">
-            {allFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="min-w-[240px] h-52 bg-white drop-shadow-lg rounded-lg flex flex-col items-start justify-center text-center p-6 border-[1px] border-gray-200 "
-              >
-                <Image
-                  alt={feature.title}
-                  src={feature.img}
-                  className="w-9 h-9 mb-3"
-                />
-                <h4 className="font-semibold text-base">{feature.title}</h4>
-                <h6 className="text-sm text-start pt-2">{feature.desc}</h6>
-              </motion.div>
-            ))}
-            <div className="flex w-72 items-center justify-center">
+          <div className="w-full flex flex-col items-center overflow-x-auto scrollbar-hide lg:hidden">
+            <div className="w-full flex items-center overflow-x-scroll gap-4   scrollbar-hide py-10 px-4">
+              {allFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="min-w-[240px] h-52 bg-white drop-shadow-lg rounded-lg flex flex-col items-start justify-center text-center p-6 border-[1px] border-gray-200 "
+                >
+                  <Image
+                    alt={feature.title}
+                    src={feature.img}
+                    className="w-9 h-9 mb-3"
+                  />
+                  <h4 className="font-semibold text-base">{feature.title}</h4>
+                  <h6 className="text-sm text-start pt-2">{feature.desc}</h6>
+                </motion.div>
+              ))}
+            </div>
+            <div className="flex w-72 items-center justify-center pb-4">
             <motion.button
-              className="uppercase w-full h-fit text-nowrap px-6 py-3 text-white bg-secondary rounded-md my-3 text-sm"
+              className="uppercase w-full h-fit text-nowrap px-6 py-3 text-white bg-secondary rounded-md  text-sm"
               initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}

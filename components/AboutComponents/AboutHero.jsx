@@ -58,7 +58,7 @@ const AboutHero = () => {
       </div>
 
       {/* Our Story */}
-      <div className="w-full h-auto width-container mx-auto flex  flex-col sm:flex-row justify-center items-center px-8 sm:px-10 lg:px-14 py-16 sm:py-28">
+      <div className="w-full h-auto width-container mx-auto flex  flex-col sm:flex-row justify-center items-center px-8 sm:px-10 lg:px-14 py-9 sm:py-28">
         <motion.div
           className="w-full sm:w-1/2"
           initial={{ x: -50, opacity: 0 }}

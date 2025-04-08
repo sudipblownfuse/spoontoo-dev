@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Section2 = () => {
   return (
-    <section className="w-full h-auto flex justify-center py-16 px-5 lg:px-14">
+    <section className="w-full h-auto flex justify-center py-12 sm:py-16 px-5 lg:px-14">
       <motion.div
         className="w-full width-container mx-0 lg:mx-14 flex flex-col sm:flex-row justify-between items-center bg-[#FFE1E1] rounded-2xl"
         initial={{ y: 80, opacity: 0 }}

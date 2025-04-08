@@ -7,7 +7,7 @@ import cake1 from "@/public/how-it-works/cake1.png";
 
 const AugmentedCakeReality = () => {
   return (
-    <section className="w-full h-auto py-20 lg:py-36  overflow-x-hidden">
+    <section className="w-full h-auto py-10 lg:py-36  overflow-x-hidden">
       <div className="relative w-full h-auto bg-[#2F2F2F]">
         <div className="w-full relative width-container mx-auto px-5 lg:px-14 flex flex-col lg:flex-row items-center justify-between">
           {/* Text Section */}

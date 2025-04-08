@@ -10,7 +10,7 @@ import clockIcon from "@/public/footer/clock.svg";
 
 const HomeFormSection = () => {
   return (
-    <section className="w-fulll h-auto pt-20 pb-20 lg:pb-40">
+    <section className="w-fulll h-auto pt-12 md:pt-20 pb-20 lg:pb-40">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col lg:flex-row justify-between items-center">
         {/* Text-section */}
         <div className="w-[90%] lg:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4 lg:gap-10">

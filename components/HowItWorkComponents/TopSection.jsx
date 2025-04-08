@@ -7,7 +7,7 @@ import topSectionImg from "@/public/how-it-works/topSection1.png";
 
 const TopSection = () => {
   return (
-    <section className="w-full h-auto pt-10 sm:pt-20">
+    <section className="w-full h-auto pt-2  sm:pt-8 lg:pt-20">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         {/* Augmented Reality */}
         <div className="w-full flex flex-col items-center">
@@ -59,7 +59,7 @@ const TopSection = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
           >
-            <h3 className="text-xl  lg:text-3xl font-semibold text-center sm:text-start">
+            <h3 className="text-2xl  lg:text-3xl font-semibold text-center sm:text-start">
               How AR can help to create a<br /> successful food business ?
             </h3>
             <h6 className="pt-2 lg:pt-5 text-sm lg:text-base text-center sm:text-start">

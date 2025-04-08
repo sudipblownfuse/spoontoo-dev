@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const WhatYouNeedToDo = () => {
   return (
-    <section className="w-full h-auto pt-10">
+    <section className="w-full h-auto pt-5 md:pt-10">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         <motion.h2
         className="text-center text-2xl lg:text-3xl font-semibold"

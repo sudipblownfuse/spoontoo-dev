@@ -87,7 +87,7 @@ const OurTeam = () => {
   return (
     <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-5 md:px-14">
       <h3 className="text-3xl sm:text-4xl font-semibold text-white pt-10">Our Team</h3>
-      <h6 className="w-[90%] sm:w-[60%] text-white text-center pt-4 pb-10">
+      <h6 className="w-[90%] sm:w-[60%] text-white text-center pt-4 pb-10 text-sm lg:text-base">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since.

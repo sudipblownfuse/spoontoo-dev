@@ -7,7 +7,7 @@ import colleagues from "@/public/career/colleagues.png";
 
 const Productiviity = () => {
   return (
-    <section className="w-full h-auto pt-8">
+    <section className="w-full h-auto pt-6 sm:pt-8">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col lg:flex-row justify-between items-center">
         {/* Test area */}
         <motion.div
@@ -20,7 +20,7 @@ const Productiviity = () => {
           <h3 className="font-semibold text-2xl lg:text-3xl w-[80%] text-center lg:text-start">
             Best Quality And Productivity Comes from Happy Minds
           </h3>
-          <h6 className="pt-5 text-xs sm:text-sm lg:text-base text-center lg:text-start px-3 sm:px-0">
+          <h6 className="pt-5 text-sm sm:text-sm lg:text-base text-center lg:text-start px-3 sm:px-0">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printertook. <br />

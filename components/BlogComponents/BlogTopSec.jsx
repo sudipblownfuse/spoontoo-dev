@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const BlogTopSec = () => {
   return (
-    <section className="w-full h-auto pt-10 lg:pt-20">
+    <section className="w-full h-auto pt-5 lg:pt-20">
       <div className="w-full h-auto width-container mx-auto px-5 md:px-14 flex flex-col items-center">
         <motion.h1
           className="w-[80%] sm:w-full text-3xl lg:text-4xl font-semibold text-center"

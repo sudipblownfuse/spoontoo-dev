@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HeadingSection = () => {
   return (
-    <section className="w-full h-auto pt-10 sm:pt-16">
+    <section className="w-full h-auto pt-4 sm:pt-16">
       <div className="w-full width-container mx-auto px-5 flex flex-col items-center">
         <motion.h1
           className="text-4xl font-semibold text-center"
