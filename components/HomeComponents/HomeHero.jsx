@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useMotionValue, useTransform, motion } from "framer-motion";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Brandmark2 from "@/public/HomeImages/Brandmark2.png";
 import webElement1 from "@/public/HomeImages/web-elements1.png";
 import Pizza1 from "@/public/HomeImages/pizza1.png";
@@ -20,6 +21,37 @@ const HomeHero = () => {
       },
     },
   };
+
+  // motion and orientation setup
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const x = e.clientX - window.innerWidth / 2;
+      const y = e.clientY - window.innerHeight / 2;
+      mouseX.set(x / 30);
+      mouseY.set(y / 30);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.DeviceOrientationEvent) {
+      const handleOrientation = (event) => {
+        const gamma = event.gamma || 0;
+        const beta = event.beta || 0;
+        mouseX.set(gamma / 3);
+        mouseY.set(beta / 3);
+      };
+
+      window.addEventListener("deviceorientation", handleOrientation, true);
+      return () =>
+        window.removeEventListener("deviceorientation", handleOrientation);
+    }
+  }, []);
 
   return (
     <section className="w-full relative h-auto bg-[#101010] pt-20 flex flex-col items-center justify-center">
@@ -57,44 +89,88 @@ const HomeHero = () => {
           </motion.button>
         </div>
 
-
         {/* ------------------------------- Image section ----------------------------- */}
         {/* Desktop view */}
         <div className="hidden md:flex w-full md:w-[40%] md:h-auto relative">
           <motion.div
             className="absolute left-[42%] -top-52"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image src={Brandmark2} alt="brandmark-2 transform" />
+            <motion.div
+              className="relative"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Image src={Brandmark2} alt="brandmark-2 transform" />
+            </motion.div>
           </motion.div>
+
           <motion.div
             className="absolute -top-80 -left-24"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image src={webElement1} alt="web-element-1 transform" />
+            <motion.div
+              className="relative"
+              animate={{ y: [0, 12, 0] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={webElement1} alt="web-element-1 transform" />
+            </motion.div>
           </motion.div>
+
           <motion.div
             className="absolute -top-40 -right-4"
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image src={Pizza1} alt="pizza-1 transform" />
+            <motion.div
+              className="relative"
+              animate={{ y: [0, -15, 0] }}
+              transition={{
+                duration: 2.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={Pizza1} alt="pizza-1 transform" />
+            </motion.div>
           </motion.div>
+
           <motion.div
             className="absolute -top-28 left-20"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image src={element21} alt="element-21 transform" />
+            <motion.div
+              className="relative"
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                duration: 3.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={element21} alt="element-21 transform" />
+            </motion.div>
           </motion.div>
+
           <motion.div
             className="absolute top-20 -left-24"
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 3.7, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image src={element31} alt="element-31 transform" />
+            <motion.div
+              className="relative"
+              animate={{ y: [0, -12, 0] }}
+              transition={{
+                duration: 3.7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={element31} alt="element-31 transform" />
+            </motion.div>
           </motion.div>
         </div>
 
@@ -102,57 +178,97 @@ const HomeHero = () => {
         <div className="relative w-full h-[550px] mr-9 md:hidden">
           <motion.div
             className="absolute left-[59%] transform -translate-x-1/2 top-14"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image
-              className="w-16"
-              src={Brandmark2}
-              alt="brandmark-2 transform"
-            />
+            <motion.div
+              className=""
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Image
+                className="w-16"
+                src={Brandmark2}
+                alt="brandmark-2 transform"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
             className="absolute left-6 right-8 -top-7"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image src={webElement1} alt="web-element-1 transform" />
+            <motion.div
+              className=""
+              animate={{ y: [0, 12, 0] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={webElement1} alt="web-element-1 transform" />
+            </motion.div>
           </motion.div>
 
           <motion.div
             className="absolute left-[77%] transform -translate-x-1/2 top-32"
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image className="w-20" src={Pizza1} alt="pizza-1 transform" />
+            <motion.div
+              className=""
+              animate={{ y: [0, -15, 0] }}
+              transition={{
+                duration: 2.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image className="w-20" src={Pizza1} alt="pizza-1 transform" />
+            </motion.div>
           </motion.div>
 
           <motion.div
             className="absolute -right-6 bottom-12"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image
-              className="w-60"
-              src={element21}
-              alt="element-21 transform"
-            />
+            <motion.div
+              className=""
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                duration: 3.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="w-60"
+                src={element21}
+                alt="element-21 transform"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
             className="absolute left-1/4 bottom-14"
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 3.7, repeat: Infinity, ease: "easeInOut" }}
+            style={{ x: mouseX, y: mouseY }}
           >
-            <Image
-              className="w-32"
-              src={element31}
-              alt="element-31 transform"
-            />
+            <motion.div
+              className=""
+              animate={{ y: [0, -12, 0] }}
+              transition={{
+                duration: 3.7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                className="w-32"
+                src={element31}
+                alt="element-31 transform"
+              />
+            </motion.div>
           </motion.div>
         </div>
-
       </div>
       <div className="hidden w-full width-container absolute md:flex -bottom-7 justify-center">
         <Image src={ArrowDown} alt="arrow-down" className="" />
