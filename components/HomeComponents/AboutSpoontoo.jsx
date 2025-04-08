@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const AboutSpoontoo = () => {
   return (
@@ -40,6 +41,7 @@ const AboutSpoontoo = () => {
             been the industry's standard dummy text ever since the 1500s, when an
             unknown printer took a galley of type and scrambled it to make a type
           </motion.h5>
+          <Link href='/about'>
           <motion.button
             className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3"
             initial={{ opacity: 0, y: 50 }}
@@ -50,6 +52,7 @@ const AboutSpoontoo = () => {
           >
             Know More
           </motion.button>
+          </Link>
         </div>
       </div>
     </section>

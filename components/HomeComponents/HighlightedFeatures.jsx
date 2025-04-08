@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import videoToAR from "@/public/HomeImages/videoToAR.svg";
 import foodDetails from "@/public/HomeImages/foodDetils.svg";
 import trulyUnlimited from "@/public/HomeImages/trulyUnlimited.svg";
@@ -187,6 +188,7 @@ const HighlightedFeatures = () => {
                 }}
                 viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% visible
               >
+                <Link href="/how-it-works">
                 <motion.button
                   className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3"
                   whileHover={{ scale: 1.05 }}
@@ -194,6 +196,7 @@ const HighlightedFeatures = () => {
                 >
                   How It's Work
                 </motion.button>
+                </Link>
               </motion.div>
             </div>
           </div>
@@ -221,6 +224,7 @@ const HighlightedFeatures = () => {
               ))}
             </div>
             <div className="flex w-72 items-center justify-center pb-4">
+              <Link href='/how-it-works'>
             <motion.button
               className="uppercase w-full h-fit text-nowrap px-6 py-3 text-white bg-secondary rounded-md  text-sm"
               initial={{ opacity: 0, x: 50 }}
@@ -230,6 +234,7 @@ const HighlightedFeatures = () => {
             >
               How It's Work
             </motion.button>
+            </Link>
             </div>
           </div>
         </div>
