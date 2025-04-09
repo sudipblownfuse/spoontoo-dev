@@ -17,17 +17,17 @@ const Footer = () => {
   const sitemapList1 = [
     { name: "HOME", path: "/" },
     { name: "About US", path: "/about" },
-    { name: "Blog", path: "/blog" },
-    { name: "Team", path: "/team" },
-    { name: "Contact", path: "/contact" },
+    { name: "How It's Work", path: "/how-it-works" },
+    {name: "Blogs", path: "/blog"},
+    { name: "Pricing", path: "/pricing" },
   ];
 
   const sitemapList2 = [
-    { name: "Pricing", path: "/pricing" },
+    { name: "Career", path: "/career" },
+    {name: "Contact", path: "contact"},
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Terms & Conditions", path: "/terms-conditions" },
     { name: "Schedule A Demo", path: "/schedule-demo" },
-    { name: "Support", path: "/support" },
   ];
   return (
     <footer className="relative w-full h-auto ">
