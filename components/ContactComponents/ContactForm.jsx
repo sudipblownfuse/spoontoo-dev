@@ -4,38 +4,40 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import contact2 from "@/public/contact/contact2.png";
+import hello from "@/public/contact/hello.png";
 
 const ContactForm = () => {
   return (
-    <section className="w-fulll h-auto pt-4 lg:pt-20 pb-14">
-      <div className="w-full width-container mx-auto px-5 sm:px-14 flex flex-col lg:flex-row items-center lg:items-start justify-between">
-        
-        {/* Text-section */}
-        <div className="w-full lg:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4">
-          {/* Heading */}
-          <motion.h3
-            className="text-3xl font-semibold"
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            Lets Talk
-          </motion.h3>
+    <section className="w-fulll h-auto pt-4 lg:pt-10 pb-14">
+      {/* ------------------------------ Heading -------------------------- */}
+      <div className="w-full width-container mx-auto flex flex-col items-center pb-12 ">
+        {/* Heading */}
+        <motion.h3
+          className="text-3xl font-semibold text-center"
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Lets Talk
+        </motion.h3>
 
-          {/* Subtext */}
-          <motion.h6
-          className="text-sm sm:text-base text-center lg:text-start"
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            We will respond to you within 24 hours. <br />
-            We’ll sign an NDA if requested. <br />
-            Access to dedicated product specialists.
-          </motion.h6>
-
+        {/* Subtext */}
+        <motion.h6
+          className="text-sm sm:text-base text-center py-3"
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          We will respond to you within 24 hours. <br />
+          We’ll sign an NDA if requested. <br />
+          Access to dedicated product specialists.
+        </motion.h6>
+      </div>
+      <div className="w-full width-container mx-auto px-5 sm:px-14 flex flex-col lg:flex-row items-center justify-between">
+        {/*------------------------------- Image Section ------------ */}
+        <div className="w-full lg:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4 pb-8 lg:pb-0">
           {/* image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -43,7 +45,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.4 }}
           >
-            <Image className="w-80" src={contact2} alt="contact-img" />
+            <Image className="w-80 lg:w-full" src={hello} alt="contact-img" />
           </motion.div>
         </div>
 
@@ -140,7 +142,6 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-
       </div>
     </section>
   );
