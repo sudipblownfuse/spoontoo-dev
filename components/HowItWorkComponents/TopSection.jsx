@@ -7,7 +7,7 @@ import topSectionImg from "@/public/how-it-works/topSection1.png";
 
 const TopSection = () => {
   return (
-    <section className="w-full h-auto pt-2  sm:pt-8 lg:pt-20">
+    <section className="w-full h-auto pt-10">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         {/* Augmented Reality */}
         <div className="w-full flex flex-col items-center">
@@ -23,7 +23,7 @@ const TopSection = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
