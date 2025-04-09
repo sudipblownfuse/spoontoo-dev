@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/layoutComponents/Navbar";
 import Footer from "@/components/layoutComponents/Footer";
 import useLenis from "@/hooks/useLenis";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 // Load Montserrat from Google Fonts
 const montserrat = Montserrat({
@@ -20,6 +22,12 @@ const metadata = {
 export default function RootLayout({ children }) {
 
   useLenis();
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <html lang="en">
