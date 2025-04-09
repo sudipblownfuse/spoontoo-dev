@@ -62,8 +62,8 @@ const ClanMembers = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="w-full h-auto flex flex-col justify-start items-center bg-[#2F2F2F] mt-10 px-0 lg:px-14">
-      <h3 className=" w-[80%] lg:w-full text-3xl lg:text-4xl font-semibold text-white pt-10 pb-6 text-center lg:text-start">
+    <section className="w-full h-auto flex flex-col justify-center items-center bg-[#2F2F2F] mt-10 px-0 lg:px-14">
+      <h3 className=" w-[80%] width-container mx-auto lg:w-full text-3xl lg:text-4xl font-semibold text-white pt-10 pb-6 text-center">
         From our clan members
       </h3>
 
