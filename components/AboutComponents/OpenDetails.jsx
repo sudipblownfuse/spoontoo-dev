@@ -13,7 +13,7 @@ const OpenDetails = () => {
   };
 
   return (
-    <section className="w-full h-auto py-10 sm:py-20">
+    <section className="w-full h-auto py-10 sm:py-16">
       <div className="w-full width-container mx-auto flex flex-col items-center px-0 sm:px-14">
         <motion.h2
           className="w-[70%] sm:w-[100%] text-3xl font-semibold text-center sm:text-center"

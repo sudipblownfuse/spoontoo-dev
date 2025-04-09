@@ -10,7 +10,7 @@ const OurStory = () => {
   return (
     <section className='w-full h-full'>
         {/* Our Story */}
-      <div className="w-full h-auto width-container mx-auto flex  flex-col sm:flex-row justify-center items-center px-8 sm:px-10 lg:px-14 py-10 sm:py-28 mt-4 sm:mt-14 ">
+      <div className="w-full h-auto width-container mx-auto flex  flex-col sm:flex-row justify-center items-center px-8 sm:px-10 lg:px-14 py-10 sm:py-28 mt-4 sm:mt-14 -mb-2 sm:-mb-10">
         <motion.div
           className="w-full sm:w-1/2"
           initial={{ x: -50, opacity: 0 }}

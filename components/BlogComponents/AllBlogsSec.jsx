@@ -41,7 +41,7 @@ const AllBlogsSec = ({ allBlogs }) => {
         {/* ------------------------ Blog Card Section (Desktop & Tablet) --------------------- */}
         <motion.div
           key={currentPage}
-          className="w-full h-auto flex justify-center flex-wrap gap-4"
+          className="w-full h-auto flex justify-between flex-wrap gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -51,8 +51,8 @@ const AllBlogsSec = ({ allBlogs }) => {
             {currentBlogs.map((blog, index) => (
               <motion.div
               key={index}
-              className="w-[92%] sm:w-[48%] lg:w-[30%] px-4 pb-8 pt-3 bg-white drop-shadow-md rounded-3xl flex flex-col items-start 
-              transform transition-all ease-in-out"
+              className="w-[92%] sm:w-[48%] lg:w-[31%] px-4 pb-8 pt-3 bg-white drop-shadow-md rounded-3xl flex flex-col items-start 
+              transform transition-all ease-in-out  mb-5"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}

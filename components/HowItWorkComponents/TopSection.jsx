@@ -7,7 +7,7 @@ import topSectionImg from "@/public/how-it-works/topSection1.png";
 
 const TopSection = () => {
   return (
-    <section className="w-full h-auto pt-10">
+    <section className="w-full h-auto pt-16">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         {/* Augmented Reality */}
         <div className="w-full flex flex-col items-center">
