@@ -8,14 +8,14 @@ import topSectionImg from "@/public/how-it-works/topSection1.png";
 
 const CareetTopSec = () => {
   return (
-    <section className="w-full h-auto pt-4 md:pt-20">
+    <section className="w-full h-auto pt-10 md:pt-16">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
         <motion.div
           className="w-full sm:w-[75%] lg:w-[60%] flex flex-col items-center"
           initial={{ y: 80, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h1 className="text-3xl lg:text-4xl font-semibold text-center">
             Explore Amazing Career Possibilities with Spoontoo
