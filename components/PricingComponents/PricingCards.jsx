@@ -54,7 +54,7 @@ const PricingCards = ({ isYearly }) => {
         <motion.div
           key={index}
           className={`w-full sm:w-[60%] lg:w-1/3 h-[490px] sm:h-[540px] mt-7 bg-white ${
-            index === 1 && "h-[640px]"
+            index === 1 && "h-[590px]"
           } rounded-3xl flex flex-col justify-between items-center border-[2px] border-gray-300 ${
             index === 1 && "z-10 border-[3px] border-secondary"
           } shadow-md`}

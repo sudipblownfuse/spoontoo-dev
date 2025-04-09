@@ -64,7 +64,7 @@ const AboutHero = () => {
         {/* text section */}
         <div className=" w-full md:w-[60%] flex flex-col items-center md:items-start mb-12 sm:mb-0">
           <motion.h1
-            className="text-white font-bold text-4xl sm:6xl lg:text-8xl text-center md:text-start"
+            className="text-white font-bold text-4xl sm:5xl lg:text-6xl text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

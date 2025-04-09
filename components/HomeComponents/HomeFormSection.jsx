@@ -39,7 +39,7 @@ const HomeFormSection = () => {
             looks great but drives real growth for your product.
           </motion.h6>
 
-          <div className="hidden lg:flex justify-center w-full">
+          <div className="hidden lg:flex justify-start w-full">
             <ul className="w-[80%] flex flex-col items-start space-y-2 lg:space-y-5 text-black text-sm sm:text-base">
               {[
                 {
