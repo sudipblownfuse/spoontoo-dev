@@ -49,15 +49,15 @@ const PricingCards = ({ isYearly }) => {
   ];
 
   return (
-    <div className="w-full width-container mx-auto px-5 sm:px-10 flex flex-col lg:flex-row justify-center items-center pt-16 pb-24">
+    <div className="w-full width-container mx-auto px-5 sm:px-10 flex flex-col lg:flex-row justify-around items-center pt-16 pb-24">
       {packageData.map((item, index) => (
         <motion.div
           key={index}
-          className={`w-full sm:w-[60%] lg:w-1/3 h-[490px] sm:h-[540px] mt-7 bg-white ${
+          className={`w-full sm:w-[50%] lg:w-[30%] h-[490px] sm:h-[580px] mt-7 bg-white ${
             index === 1 && "h-[590px]"
           } rounded-3xl flex flex-col justify-between items-center border-[2px] border-gray-300 ${
             index === 1 && "z-10 border-[3px] border-secondary"
-          } shadow-md`}
+          } drop-shadow-md hover:drop-shadow-2xl`}
           initial={animations[index].initial}
           animate={animations[index].animate}
           transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.2 }}
