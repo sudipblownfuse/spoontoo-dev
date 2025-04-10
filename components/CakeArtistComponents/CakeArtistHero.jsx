@@ -60,7 +60,7 @@ const CakeArtistHero = () => {
         {/* text section */}
         <div className=" w-full md:w-[50%] flex flex-col items-center md:items-start ">
           <motion.h1
-            className="text-white font-semibold text-3xl md:4xl lg:text-6xl text-center md:text-start"
+            className="text-white font-semibold text-3xl md:4xl lg:text-5xl text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -69,7 +69,7 @@ const CakeArtistHero = () => {
           </motion.h1>
 
           <motion.h5
-            className="text-sm w-full md:w-[90%] text-white py-8 md:py-14 text-center md:text-start"
+            className="text-sm w-full md:w-[60%] text-white py-8 md:py-14 text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
