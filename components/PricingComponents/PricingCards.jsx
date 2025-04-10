@@ -44,8 +44,8 @@ const PricingCards = ({ isYearly }) => {
 
   const animations = [
     { initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }, // Left to Right
-    { initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } },  // Bottom to Top
-    { initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } },  // Right to Left
+    { initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }, // Bottom to Top
+    { initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }, // Right to Left
   ];
 
   return (
@@ -53,15 +53,14 @@ const PricingCards = ({ isYearly }) => {
       {packageData.map((item, index) => (
         <motion.div
           key={index}
-          className={`w-full sm:w-[50%] lg:w-[30%] h-[490px] sm:h-[580px] mt-7 bg-white ${
-            index === 1 && "h-[590px]"
-          } rounded-3xl flex flex-col justify-between items-center border-[2px] border-gray-300 ${
-            index === 1 && "z-10 border-[3px] border-secondary"
-          } drop-shadow-md hover:drop-shadow-2xl`}
+          className={`group w-full sm:w-[50%] lg:w-[30%] h-[490px] sm:h-[580px] mt-7 bg-white
+        rounded-3xl flex flex-col justify-between items-center border-[2px] border-gray-300
+        drop-shadow-md hover:drop-shadow-2xl transition-all duration-300 ease-in-out
+        hover:border-secondary`}
           initial={animations[index].initial}
           animate={animations[index].animate}
           transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.2 }}
-          viewport={{once: true, amount:0.4}}
+          viewport={{ once: true, amount: 0.4 }}
           whileHover={{ scale: 1.05 }}
         >
           {/* Top section */}
@@ -70,7 +69,10 @@ const PricingCards = ({ isYearly }) => {
             <div className="h-[1px] w-[80%] bg-[#464646]"></div>
             <div className="w-full flex flex-col items-center gap-3 pt-5">
               {item.offerings.map((offer, i) => (
-                <h5 key={i} className="font-semibold text-gray-600 text-sm sm:text-base">
+                <h5
+                  key={i}
+                  className="font-semibold text-gray-600 text-sm sm:text-base"
+                >
                   {offer}
                 </h5>
               ))}
@@ -83,11 +85,8 @@ const PricingCards = ({ isYearly }) => {
               ${isYearly ? item.price : ((item.price / 12) * 1.4).toFixed()}.00
             </h5>
             <button
-              className={`uppercase w-fit px-6 py-3 rounded-md my-3 text-sm sm:text-base ${
-                index === 1
-                  ? "text-white bg-secondary transform transition-all hover:scale-110 duration-300 ease-in-out"
-                  : "text-secondary border-[2px] border-secondary transform transition-all hover:bg-secondary hover:text-white duration-300 ease-linear"
-              } `}
+              className={`uppercase w-fit px-6 py-3 rounded-md my-3 text-sm sm:text-base text-secondary border-[2px] border-secondary transform transition-all duration-300 ease-linear
+      group-hover:bg-secondary group-hover:text-white hover:scale-105 `}
             >
               Get Started!
             </button>
