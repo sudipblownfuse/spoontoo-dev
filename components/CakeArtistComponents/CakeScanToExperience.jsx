@@ -6,7 +6,7 @@ import qrImg from "@/public/HomeImages/qrImg.png";
 
 const CakeScanToExperience = () => {
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <div className="w-full h-auto bg-black">
         <div className="w-full width-container relative mx-auto flex flex-col-reverse md:flex-row md:justify-between items-center px-3 md:px-14">
           {/* Text Section */}
