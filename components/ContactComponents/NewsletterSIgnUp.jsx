@@ -1,9 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNotification } from "@/context/NotificationContext";
 
 const NewsletterSIgnUp = () => {
+  const {addNotification} = useNotification();
+
+  const [email, setEmail] = useState("");
+
+  // -------------------- handle Submit ---------------------
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+      // Simple email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        return addNotification("error", "Please enter a valid email address.");
+      }
+
+      // If everything is valid
+      addNotification("success", "Form submitted successfully!");
+      setEmail("")
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <section className="w-full h-auto bg-[#2F2F2F]">
       <div className="w-full width-container mx-auto px-5 sm:px-14 py-8 flex flex-col lg:flex-row justify-center items-center">
@@ -39,11 +62,12 @@ const NewsletterSIgnUp = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <input
-            className="w-full sm:w-[80%] lg:w-[55%]  px-4 py-3 rounded-lg text-sm md:teaxt-base lg:text-lg"
+            className="w-full sm:w-[80%] lg:w-[55%]  px-4 py-3 rounded-lg text-sm md:teaxt-base lg:text-lg focus:ring-2 focus:ring-secondary focus:outline-none"
             placeholder="Enter your email"
-            required={true}
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
           />
-          <button className="uppercase w-full sm:w-fit px-5 py-3 mt-4 sm:mt-0 text-sm md:teaxt-base lg:text-lg rounded-lg bg-secondary text-white transform transition-all hover:scale-105 duration-200 ease-in-out">
+          <button onClick={handleSubmit} className="uppercase w-full sm:w-fit px-5 py-3 mt-4 sm:mt-0 text-sm md:teaxt-base lg:text-lg rounded-lg bg-secondary text-white transform transition-all hover:scale-105 duration-200 ease-in-out">
             SUBSCRIBE
           </button>
         </motion.div>

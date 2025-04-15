@@ -1,9 +1,31 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNotification } from "@/context/NotificationContext";
 
 const BlogTopSec = () => {
+const {addNotification} = useNotification();
+  const [email, setEmail] = useState("")
+
+  // -------------------- handle Submit ---------------------
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+      // Simple email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        return addNotification("error", "Please enter a valid email address.");
+      }
+
+      // If everything is valid
+      addNotification("success", "Form submitted successfully!");
+      setEmail("")
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <section className="w-full h-auto pt-5 lg:pt-20">
       <div className="w-full h-auto width-container mx-auto px-5 md:px-14 flex flex-col items-center">
@@ -35,11 +57,13 @@ const BlogTopSec = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <input
-            className="w-full bg-gray-300 py-4 text-sm sm:text-base lg:text-lg rounded-lg pl-4 pr-36 sm:pr-44 lg:pr-56"
+            className="w-full bg-gray-300 py-4 text-sm sm:text-base lg:text-lg rounded-lg pl-4 pr-36 sm:pr-44 lg:pr-56 focus:ring-2 focus:ring-secondary focus:outline-none"
             placeholder="Enter your email"
-            type="email"
+            type="text"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
           />
-          <button className="uppercase absolute mr-1 px-5 py-3 text-sm sm:text-base lg:text-lg rounded-lg bg-secondary text-white  hover:bg-[#bb2f2f]">
+          <button onClick={handleSubmit} className="uppercase absolute mr-1 px-5 py-3 text-sm sm:text-base lg:text-lg rounded-lg bg-secondary text-white  hover:bg-[#bb2f2f]">
             SUBSCRIBE
           </button>
         </motion.div>

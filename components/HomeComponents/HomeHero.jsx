@@ -56,11 +56,11 @@ const HomeHero = () => {
 
   return (
     <section className="w-full relative h-auto bg-[#101010] pt-20 flex flex-col items-center justify-center">
-      <div className="relative w-full h-[770px] md:h-[650px] width-container mx-auto flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-14">
+      <div className="relative w-full h-[770px] sm:h-[580px] lg:h-[650px] width-container mx-auto flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-14">
         {/* text section */}
         <div className=" w-full md:w-[60%] flex flex-col items-center md:items-start">
           <motion.h1
-            className="text-white font-bold text-3xl md:4xl lg:text-6xl text-center md:text-start"
+            className="text-white w-full sm:w-[80%] font-bold text-3xl w-[1024px]:4xl lg:text-5xl text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -69,7 +69,7 @@ const HomeHero = () => {
           </motion.h1>
 
           <motion.h5
-            className="text-sm w-full md:w-[90%] text-white py-8 md:py-14 text-center md:text-start"
+            className="text-sm w-full md:w-[90%] text-white py-8 lg:py-14 text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -80,7 +80,7 @@ const HomeHero = () => {
           </motion.h5>
 
           <motion.button
-            className="uppercase w-fit px-4 py-3 text-white bg-secondary rounded-md mb-12"
+            className="uppercase w-fit px-4 py-3 text-white bg-secondary rounded-md mb-12 text-sm lg:text-base"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -91,6 +91,8 @@ const HomeHero = () => {
         </div>
 
         {/* ------------------------------- Image section ----------------------------- */}
+
+        
         {/* Desktop view */}
         <div className="hidden md:flex w-full md:w-[40%] md:h-auto relative">
           <motion.div
@@ -178,7 +180,7 @@ const HomeHero = () => {
         {/* Mobile Image section (Hidden for md and above) */}
         <div className="relative w-full h-[550px] mr-9 md:hidden">
           <motion.div
-            className="absolute left-[59%] transform -translate-x-1/2 top-14"
+            className="absolute left-[59%] transform -translate-x-1/2  top-14"
             style={{ x: mouseX, y: mouseY }}
           >
             <motion.div

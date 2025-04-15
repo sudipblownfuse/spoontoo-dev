@@ -7,6 +7,8 @@ import Footer from "@/components/layoutComponents/Footer";
 import useLenis from "@/hooks/useLenis";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { NotificationProvider } from "@/context/NotificationContext";
+import { Notifications } from "@/components/layoutComponents/Notifications";
 
 // Load Montserrat from Google Fonts
 const montserrat = Montserrat({
@@ -20,7 +22,6 @@ const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   useLenis();
 
   const pathname = usePathname();
@@ -35,8 +36,11 @@ export default function RootLayout({ children }) {
         <div className="w-full  min-h-screen h-auto flex flex-col">
           <Navbar />
           <main className="flex-grow">
-            {children}
-            {/* <FloatingButtons/> */}
+            <NotificationProvider>
+              {children}
+              {/* <FloatingButtons/> */}
+              <Notifications />
+            </NotificationProvider>
           </main>
           <Footer />
         </div>

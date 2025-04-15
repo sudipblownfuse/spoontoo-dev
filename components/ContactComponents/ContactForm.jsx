@@ -1,12 +1,65 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import contact2 from "@/public/contact/contact2.png";
 import hello from "@/public/contact/hello.png";
+import { useNotification } from "@/context/NotificationContext";
 
 const ContactForm = () => {
+  const { addNotification } = useNotification();
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  // -------------- Handle Change Input Values -----------------
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  //--------------------- handle dSubmit function ------------------
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+      const { firstName, lastName, email, message } = formData;
+
+      if (!firstName || !lastName || !email || !message) {
+        return addNotification(
+          "error",
+          "Please fill all the fields before submitting."
+        );
+      }
+
+      // Simple email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return addNotification("error", "Please enter a valid email address.");
+      }
+
+      // If everything is valid
+      addNotification("success", "Form submitted successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+      });
+
+      // Optionally clear form or send data here
+    } catch (error) {
+      console.log(error);
+      addNotification(
+        "error",
+        "Internal server error. Please try again later."
+      );
+    }
+  };
   return (
     <section className="w-fulll h-auto pt-4 lg:pt-10 pb-14">
       {/* ------------------------------ Heading -------------------------- */}
@@ -53,7 +106,7 @@ const ContactForm = () => {
         <div className="w-full lg:w-[60%] h-auto mx-5 bg-white shadow-lg drop-shadow-lg rounded-2xl">
           <form
             className="w-full h-auto px-5 py-12 space-y-5 relative"
-            action=""
+            onSubmit={handleSubmit}
           >
             <div className="w-full flex flex-col lg:flex-row gap-5">
               {/* First Name */}
@@ -69,8 +122,10 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  required
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-secondary focus:outline-none"
                 />
               </motion.div>
 
@@ -87,8 +142,10 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  required
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-secondary focus:outline-none"
                 />
               </motion.div>
             </div>
@@ -104,9 +161,11 @@ const ContactForm = () => {
                 Email ID<span className="text-secondary">*</span>
               </label>
               <input
-                type="email"
-                className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                required
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-secondary focus:outline-none"
               />
             </motion.div>
 
@@ -121,15 +180,18 @@ const ContactForm = () => {
                 Message<span className="text-secondary">*</span>
               </label>
               <textarea
-                className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                rows="4"
-                required
-              ></textarea>
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full p-3 bg-[#F2F1F1] focus:ring-2 focus:ring-secondary focus:outline-none"
+                rows="5"
+              />
             </motion.div>
 
             {/* Submit Button */}
             <div className="absolute w-full md:w-auto left-1/2 bottom-[-85px] md:bottom-[-36px] transform -translate-x-1/2">
               <motion.button
+              type="submit"
                 className="uppercase w-full md:w-fit px-6 py-3 text-white bg-secondary rounded-md my-3 drop-shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
