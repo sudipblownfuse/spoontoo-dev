@@ -127,11 +127,11 @@ const RecentBlogSec = ({ recentBlogs }) => {
                   <h5 className="font-semibold text-xs lg:text-base">{blog.title}</h5>
                   <h6 className="w-full text-xs lg:text-sm py-2 truncate lg:text-pretty">{blog.description}</h6>
                   {/* categories */}
-                  <div className="flex justify-start items-center gap-1 lg:gap-4">
+                  <div className="flex justify-start items-center gap-1 md:gap-2">
                     {blog.categories.map((category, i) => (
                       <p
                         key={i}
-                        className="text-[8px] lg:text-xs text-white bg-secondary px-2 lg:px-4 py-1 rounded-full"
+                        className="text-[8px] lg:text-xs text-white bg-secondary px-2  py-1 rounded-full"
                       >
                         {category}
                       </p>

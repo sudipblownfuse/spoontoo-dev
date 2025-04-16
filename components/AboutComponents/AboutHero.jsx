@@ -73,7 +73,7 @@ const AboutHero = () => {
           </motion.h1>
 
           <motion.h5
-            className="text-sm w-[90%] md:w-[80%] text-white py-5 sm:py-8 md:py-14 text-center md:text-start"
+            className="text-sm w-[90%] md:w-[55%] text-white py-5 sm:py-8 md:py-10 text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

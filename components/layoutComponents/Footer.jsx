@@ -41,10 +41,10 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="w-full lg:w-1/3 pr-0  md:pr-5">
             <div className="flex justify-center gap-5 lg:gap-10 md:justify-start">
-              <Image className="h-16 md:h-28 w-auto" src={BrandMark} alt="brandmark" />
-              <Image className="h-16 md:h-28 w-auto" src={LetterMark} alt="lettermark" />
+              <Image className="h-16 md:h-24 w-auto" src={BrandMark} alt="brandmark" />
+              <Image className="h-16 md:h-24 w-auto" src={LetterMark} alt="lettermark" />
             </div>
-            <h4 className="text-white text-sm pt-6 md:pt-12 text-justify sm:text-start">
+            <h4 className="text-white text-xs pt-6 md:pt-5 text-justify sm:text-justify">
               Spoontoo is a food platform that allows Video to Augmented Reality
               creation for with the help of AI.
               <br />

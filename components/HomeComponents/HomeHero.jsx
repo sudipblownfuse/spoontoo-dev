@@ -60,7 +60,7 @@ const HomeHero = () => {
         {/* text section */}
         <div className=" w-full md:w-[60%] flex flex-col items-center md:items-start">
           <motion.h1
-            className="text-white w-full sm:w-[80%] font-bold text-3xl w-[1024px]:4xl lg:text-5xl text-center md:text-start"
+            className="text-white w-full sm:w-[70%] font-bold text-3xl w-[1024px]:3xl lg:text-4xl text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -69,7 +69,7 @@ const HomeHero = () => {
           </motion.h1>
 
           <motion.h5
-            className="text-sm w-full md:w-[90%] text-white py-8 lg:py-14 text-center md:text-start"
+            className="text-sm w-full md:w-[65%] text-white py-8 lg:py-14 text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

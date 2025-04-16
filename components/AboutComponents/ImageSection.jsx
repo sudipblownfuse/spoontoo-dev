@@ -12,15 +12,15 @@ const images = [img1, img2, img3, img4, img5];
 
 const ImageSection = () => {
   return (
-    <section className="w-full h-auto py-10 md:py-14">
-      <div className="px-6 lg:px-0 width-container mx-auto">
+    <section className="w-full h-auto py-10 md:py-14 flex justify-center items-center">
+      <div className="px-6 width-container mx-auto flex justify-center items-center">
         {/* Horizontal scroll for mobile & tablet, grid for large screens */}
-        <div className="flex lg:grid lg:grid-cols-5 gap-x-4 lg:gap-x-6 overflow-x-auto scrollbar-hide pr-6">
+        <div className="flex lg:grid lg:grid-cols-5 gap-x-4 lg:gap-x-6 overflow-x-auto scrollbar-hide ">
           {images.map((img, index) => (
             <motion.div
               key={index}
               className={`
-                relative flex-shrink-0 min-w-[13rem] sm:min-w-[15rem] overflow-hidden rounded-xl shadow-lg
+                relative flex-shrink-0 min-w-[13rem] sm:min-w-[11rem] overflow-hidden rounded-xl shadow-lg
                 ${index === 2 ? "lg:mt-8" : index % 3 === 0 ? "lg:mt-6" : "lg:mt-0"} 
                 h-40 md:h-52 lg:h-auto
               `}
