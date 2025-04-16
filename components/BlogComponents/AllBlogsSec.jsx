@@ -27,7 +27,7 @@ const AllBlogsSec = ({ allBlogs }) => {
   const currentBlogs = allBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   return (
-    <section className="w-full h-auto pt-8 lg:pt-16">
+    <section className="w-full h-auto pt-8 lg:pt-12">
       <div className="w-full width-container mx-auto px-2 lg:px-12 flex flex-col justify-start">
         {/* --------------- heading (Desktop & Tablet) --------------- */}
         <h2 className="hidden sm:flex w-full px-6 text-start text-2xl lg:text-3xl font-bold py-6">

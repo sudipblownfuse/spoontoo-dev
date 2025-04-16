@@ -10,7 +10,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
   const otherRecentBlogs = recentBlogs.slice(1, 4);
 
   return (
-    <section className="hidden w-full h-auto pt-32 pb-10 sm:flex justify-center">
+    <section className="hidden w-full h-auto pt-24 pb-10 sm:flex justify-center">
       <div className="w-full width-container relative mx-auto px-5 lg:px-14 flex flex-col items-center">
         {/* Heading */}
         <div className="absolute w-full px-5 lg:px-14">

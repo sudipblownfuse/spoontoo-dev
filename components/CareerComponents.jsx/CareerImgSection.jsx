@@ -51,7 +51,7 @@ const CareerImgSection = () => {
       </div>
 
       {/* Desktop View - Swiper */}
-      <div className="hidden md:block w-full width-container mx-auto relative px-0 md:px-10">
+      <div className="hidden md:block w-full width-container mx-auto relative px-0 ">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay]}

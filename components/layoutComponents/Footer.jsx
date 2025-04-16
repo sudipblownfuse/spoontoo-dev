@@ -36,8 +36,8 @@ const Footer = () => {
         className="absolute w-full h-full object-cover"
         alt="footer-bg"
       />
-      <div className="relative bg-black w-full h-full opacity-95 p-8">
-        <div className="w-full width-container h-auto mx-auto flex flex-col items-center lg:flex-row lg:justify-between lg:items-center pt-6 md:pt-14">
+      <div className="relative bg-black w-full h-full opacity-95 py-8">
+        <div className="w-full width-container h-auto mx-auto flex flex-col items-center lg:flex-row lg:justify-between lg:items-center pt-6 md:pt-14 px-5 lg:px-14">
           {/* Logo & Description */}
           <div className="w-full lg:w-1/3 pr-0  md:pr-5">
             <div className="flex justify-center gap-5 lg:gap-10 md:justify-start">
