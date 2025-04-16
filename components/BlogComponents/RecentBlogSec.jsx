@@ -131,7 +131,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
                     {blog.categories.map((category, i) => (
                       <p
                         key={i}
-                        className="text-[8px] lg:text-xs text-white bg-secondary px-2  py-1 rounded-full"
+                        className="text-[8px] lg:text-[10px] text-white bg-secondary px-2  py-1 rounded-full"
                       >
                         {category}
                       </p>

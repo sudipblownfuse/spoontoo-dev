@@ -90,15 +90,16 @@ const ContactForm = () => {
       </div>
       <div className="w-full width-container mx-auto px-5 sm:px-14 flex flex-col lg:flex-row items-center justify-between">
         {/*------------------------------- Image Section ------------ */}
-        <div className="w-full lg:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4 pb-8 lg:pb-0">
+        <div className="w-full md:w-[40%] h-auto flex flex-col items-center lg:items-start gap-4 pb-8 lg:pb-0">
           {/* image */}
           <motion.div
+          className="w-full flex justify-center "
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.4 }}
           >
-            <Image className="w-80 lg:w-full" src={hello} alt="contact-img" />
+            <Image className="w-80 md:w-full" src={hello} alt="contact-img" />
           </motion.div>
         </div>
 
@@ -192,7 +193,7 @@ const ContactForm = () => {
             <div className="absolute w-full md:w-auto left-1/2 bottom-[-85px] md:bottom-[-36px] transform -translate-x-1/2">
               <motion.button
               type="submit"
-                className="uppercase w-full md:w-fit px-6 py-3 text-white bg-secondary rounded-md my-3 drop-shadow-md"
+                className="uppercase w-full md:w-fit px-12 py-3 text-white bg-secondary rounded-md my-3 drop-shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.5 }}

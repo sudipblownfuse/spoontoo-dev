@@ -12,7 +12,7 @@ const CareerHero = () => {
       <div className="w-full width-container mx-auto flex flex-col lg:flex-row items-center justify-between px-5 lg:px-14 py-16">
         {/* ------------------------ Text ----------------------- */}
         <div className="w-[100%] sm:w-[70%] lg:w-[40%] flex flex-col items-center lg:items-start justify-center pb-12 lg:pb-0">
-          <motion.h1 className="text-white font-bold text-3xl md-4xl lg:text-5xl text-center lg:text-start"
+          <motion.h1 className="w-[80%]  text-white font-bold text-3xl md:text-3xl text-center lg:text-start"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -20,7 +20,7 @@ const CareerHero = () => {
           >
             Explore Amazing Career Possibilities with Spoontoo
           </motion.h1>
-          <motion.h4 className="w-[85%] text-white text-sm lg:text-base py-4 text-center lg:text-start"
+          <motion.h4 className="w-[83%] text-white text-sm lg:text-base py-4 text-center lg:text-start"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

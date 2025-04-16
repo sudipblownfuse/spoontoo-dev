@@ -20,7 +20,7 @@ const Productiviity = () => {
           <h3 className="font-semibold text-2xl lg:text-3xl w-[80%] text-center lg:text-start">
             Best Quality And Productivity Comes from Happy Minds
           </h3>
-          <h6 className="pt-5 text-sm sm:text-sm lg:text-base text-center lg:text-start px-3 sm:px-0">
+          <h6 className="w-[80%] pt-5 text-sm  text-center lg:text-justify px-3 sm:px-0">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printertook. <br />

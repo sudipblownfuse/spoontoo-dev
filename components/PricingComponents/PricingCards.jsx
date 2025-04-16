@@ -49,7 +49,7 @@ const PricingCards = ({ isYearly }) => {
   ];
 
   return (
-    <div className="w-full width-container mx-auto px-5 sm:px-10 flex flex-col lg:flex-row justify-around items-center pt-16 pb-24">
+    <div className="w-full width-container mx-auto px-5  flex flex-col lg:flex-row justify-around items-center pt-16 pb-24">
       {packageData.map((item, index) => (
         <motion.div
           key={index}
@@ -71,7 +71,7 @@ const PricingCards = ({ isYearly }) => {
               {item.offerings.map((offer, i) => (
                 <h5
                   key={i}
-                  className="font-semibold text-gray-600 text-sm sm:text-base"
+                  className="font-semibold text-gray-600 text-sm "
                 >
                   {offer}
                 </h5>

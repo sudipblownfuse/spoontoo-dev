@@ -10,7 +10,7 @@ const CareetTopSec = () => {
   return (
     <section className="w-full h-auto pt-10 md:pt-16">
       <div className="w-full width-container mx-auto px-5 lg:px-14 flex flex-col items-center">
-        <motion.div
+        {/* <motion.div
           className="w-full sm:w-[75%] lg:w-[60%] flex flex-col items-center"
           initial={{ y: 80, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -23,9 +23,9 @@ const CareetTopSec = () => {
           <h5 className="w-[70%] sm:w-full text-center pt-4 text-sm sm:text-base">
             Join Us To Make A Difference Through Your Experience
           </h5>
-        </motion.div>
+        </motion.div> */}
 
-        <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center pt-14 sm:pt-24">
+        <div className="w-full flex flex-col-reverse sm:flex-row justify-center items-center pt-14 sm:pt-6">
           {/* image */}
           <motion.div
             className="w-full sm:w-1/2 h-auto mt-7 sm:mt-0 flex justify-center sm:justify-start"
@@ -50,7 +50,7 @@ const CareetTopSec = () => {
             <h3 className="text-xl lg:text-3xl font-semibold text-center sm:text-start">
             What Makes Life At Spoontoo Different And Thriving?
             </h3>
-            <h6 className="pt-5 text-sm lg:text-base text-center sm:text-start">
+            <h6 className="pt-5 text-sm lg:text-base text-center sm:text-justify">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printertook.
