@@ -8,6 +8,7 @@ import ViewBlogBody from "@/components/BlogComponents/ViewBlogComponents/ViewBlo
 import ViewBlogSuggestionSec from "@/components/BlogComponents/ViewBlogComponents/ViewBlogSuggestionSec";
 
 export default function Page() {
+  const { scrollYProgress } = useScroll();
   const { id } = useParams();
   const router = useRouter();
 
