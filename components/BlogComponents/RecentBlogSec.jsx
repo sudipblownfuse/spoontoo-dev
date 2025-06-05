@@ -4,10 +4,18 @@ import React from "react";
 import Image from "next/image";
 import { HiMiniArrowUturnRight } from "react-icons/hi2";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const RecentBlogSec = ({ recentBlogs }) => {
   const highlightedBlog = recentBlogs[0];
   const otherRecentBlogs = recentBlogs.slice(1, 4);
+
+  const router = useRouter();
+  
+    // -------------------- View Blog Navigation func ------------
+    const navigate = (path) => {
+      router.push(path)
+    }
 
   return (
     <section className="hidden w-full h-auto pt-24 pb-10 sm:flex justify-center">
@@ -101,6 +109,7 @@ const RecentBlogSec = ({ recentBlogs }) => {
               <motion.div
                 key={index}
                 className="w-full h-auto p-3 lg:p-4 bg-white drop-shadow-xl flex justify-between rounded-2xl cursor-pointer"
+                onClick={()=> navigate(`/blog/${blog.id}`)}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
