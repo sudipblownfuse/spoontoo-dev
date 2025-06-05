@@ -75,7 +75,7 @@ const Footer = () => {
                     <Link
                       href={link.path}
                       className={`font-normal text-sm uppercase hover:text-secondary ${
-                        pathname === link.path ? "text-secondary" : ""
+                        pathname === link.path || (pathname.startsWith(link.path) && link.path !== "/") ? "text-secondary" : ""
                       }`}
                     >
                       {link.name}
@@ -93,7 +93,7 @@ const Footer = () => {
                     <Link
                       href={link.path}
                       className={`font-normal text-sm uppercase hover:text-secondary ${
-                        pathname === link.path ? "text-secondary" : ""
+                        pathname === link.path || (pathname.startsWith(link.path) && link.path !== "/") ? "text-secondary" : ""
                       }`}
                     >
                       {link.name}

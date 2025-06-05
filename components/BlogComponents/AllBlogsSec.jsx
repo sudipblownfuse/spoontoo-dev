@@ -4,12 +4,16 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const AllBlogsSec = ({ allBlogs }) => {
   const blogsPerPage = 6;
   const totalPages = Math.ceil(allBlogs.length / blogsPerPage);
 
   const [currentPage, setCurrentPage] = useState(1);
+
+  const router = useRouter()
+
 
   useEffect(() => {
     const savedPage = localStorage.getItem("currentPage");
@@ -26,6 +30,11 @@ const AllBlogsSec = ({ allBlogs }) => {
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = allBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
+  // --------- view Blog Func -------
+  const navigate = (path) => {
+    router.push(path)
+  }
+
   return (
     <section className="w-full h-auto pt-8 lg:pt-12">
       <div className="w-full width-container mx-auto px-2 lg:px-12 flex flex-col justify-start">
@@ -41,7 +50,7 @@ const AllBlogsSec = ({ allBlogs }) => {
         {/* ------------------------ Blog Card Section (Desktop & Tablet) --------------------- */}
         <motion.div
           key={currentPage}
-          className="w-full h-auto flex justify-between flex-wrap gap-4"
+          className="w-full h-auto flex justify-center flex-wrap gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -51,8 +60,9 @@ const AllBlogsSec = ({ allBlogs }) => {
             {currentBlogs.map((blog, index) => (
               <motion.div
               key={index}
-              className="w-[92%] sm:w-[48%] lg:w-[31%] px-4 pb-8 pt-3 bg-white drop-shadow-md rounded-3xl flex flex-col items-start 
-              transform transition-all ease-in-out  mb-5"
+              className="w-[92%] sm:w-[48%] lg:w-[31%] px-4 pb-8 pt-3 bg-white drop-shadow-md rounded-3xl flex flex-col items-center 
+              transform transition-all ease-in-out  mb-5 cursor-pointer"
+              onClick={()=> navigate(`/blog/${blog.id}`)}
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}

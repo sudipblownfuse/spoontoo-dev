@@ -3,16 +3,20 @@
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
-import { allBlogs } from "../page";
+import { allBlogs, recentBlogs } from "../page";
 import ViewBlogBody from "@/components/BlogComponents/ViewBlogComponents/ViewBlogBody";
 import ViewBlogSuggestionSec from "@/components/BlogComponents/ViewBlogComponents/ViewBlogSuggestionSec";
+import { FaAngleLeft } from "react-icons/fa";
 
 export default function Page() {
   const { scrollYProgress } = useScroll();
   const { id } = useParams();
   const router = useRouter();
 
-  const blogToView = allBlogs.find((item) => item.id === Number(id));
+  let blogToView = allBlogs.find((item) => item.id === Number(id));
+  if(!blogToView){
+    blogToView =  recentBlogs.find((item) => item.id === Number(id));
+  }
 
   // --------------------- If the BLOG is not found --------------
   if (!blogToView) {
@@ -48,14 +52,14 @@ export default function Page() {
 
       {/* Scrollable content */}
       <main className="w-full min-h-screen pt-32 overflow-x-clip">
-        <div className="w-full h-auto width-container mx-auto px-5 md:px-14 flex justify-between">
+        <div className="w-full h-auto width-container mx-auto px-5 md:px-14 flex flex-col lg:flex-row justify-between">
           {/* --------------------------------- BLOG BODY --------------------------- */}
-          <div className="w-[64%] h-auto">
+          <div className="w-full lg:w-[64%] h-auto">
             <ViewBlogBody blog={blogToView}/>
           </div>
 
           {/* ---------------------------- Suggestions and Categories ----------------------------- */}
-          <div className="w-[30%] h-auto">
+          <div className="w-full lg:w-[30%] h-auto">
             <ViewBlogSuggestionSec blog={blogToView} />
           </div>
         </div>

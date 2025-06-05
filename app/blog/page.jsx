@@ -18,28 +18,28 @@ import ab6 from "@/public/blog/all-blogs/ab6.png"
 
    export const recentBlogs = [
         {
-            id:1,
+            id:20,
             image: rb1,
             title: "Returning to Profitability: Spoontoo 2024 Profit Share & Formula",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
             categories: ["AR View", "Research", "Technology"]
         },
         {
-            id:2,
+            id:21,
             image: rb2,
             title: "TikTok for Business: The Ultimate Playbook for 2025",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
             categories: ["AR View", "Research", "Technology"]
         },
         {
-            id:3,
+            id:22,
             image: rb3,
             title: "TikTok for Business: The Ultimate Playbook for 2025",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
             categories: ["AR View", "Research", "Technology"]
         },
         {
-            id:4,
+            id:23,
             image: rb4,
             title: "TikTok for Business: The Ultimate Playbook for 2025",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
