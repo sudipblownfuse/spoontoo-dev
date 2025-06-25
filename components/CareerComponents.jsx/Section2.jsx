@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 const Section2 = () => {
   return (
-    <section className="w-full h-auto flex justify-center py-12 sm:py-16 mx-0 px-2 md:px-0 lg:mx-14">
+    <section className="w-full h-auto flex justify-center ">
+      <div className="w-full width-container h-auto px-2 lg:px-14 pt-28">
       <motion.div
-        className="w-full width-container mx-auto  flex flex-col sm:flex-row justify-between items-center bg-[#FFE1E1] rounded-2xl"
+        className="w-full   flex flex-col sm:flex-row justify-between items-center bg-[#FFE1E1] rounded-2xl "
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
@@ -31,6 +32,7 @@ const Section2 = () => {
           </button>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 };

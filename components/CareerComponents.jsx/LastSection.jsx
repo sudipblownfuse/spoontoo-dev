@@ -15,10 +15,10 @@ const LastSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}
         >
-          <h3 className="w-full md:w-[90%] text-2xl font-semibold text-center md:text-start">
+          <h3 className="w-full md:w-[90%] text-[22px] font-semibold text-center md:text-start">
             What Makes Life At Spoontoo Different And Thriving?
           </h3>
-          <h6 className="w-full md:w-[90%] pt-2 text-center md:text-start">
+          <h6 className="w-full md:w-[90%] pt-2 text-center md:text-start text-sm lg:text-base">
             Challenge the ordinary. Embrace innovation. Discover the right
             career track. Take a look at our job openings.
           </h6>

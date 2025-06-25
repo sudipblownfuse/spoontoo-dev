@@ -1,26 +1,13 @@
-"use client";
 
-import AugmentedCakeReality from '@/components/HowItWorkComponents/AugmentedCakeReality';
-import HappyClientsHIW from '@/components/HowItWorkComponents/HappyClientsHIW';
-import HAveAnIdea from '@/components/HowItWorkComponents/HaveAnIdea';
-import HIWhero from '@/components/HowItWorkComponents/HIWhero';
-import ProcessFlow from '@/components/HowItWorkComponents/ProcessFlow';
-import TopSection from '@/components/HowItWorkComponents/TopSection'
-import WhatYouNeedToDo from '@/components/HowItWorkComponents/WhatYouNeedToDo';
-import React from 'react'
+import HowItWorksContent from './HowItWorksContent';
 
-const page = () => {
-  return (
-    <main className='w-full min-h-screen pt-20 overflow-x-clip'>
-      <HIWhero/>
-      <TopSection/>
-      <ProcessFlow/>
-      <WhatYouNeedToDo/>
-      <AugmentedCakeReality/>
-      <HappyClientsHIW/>
-      <HAveAnIdea/>
-    </main>
-  )
+export const metadata = {
+  title: "What are AR Menus For Cafes and How Do they Work",
+  description: "Discover what AR menus are and how they help cafes show food in 3D. Learn how they work and why they boost engagement and orders"
 }
 
-export default page
+export default function HowItWorksPage() {
+  return <HowItWorksContent />;
+}
+
+

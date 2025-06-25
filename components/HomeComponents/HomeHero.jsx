@@ -65,7 +65,7 @@ const HomeHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Experience Taste, Taste the Experience Experience It All
+            Craft Memorable Experiences with AR Menus For Restaurants
           </motion.h1>
 
           <motion.h5
@@ -74,9 +74,7 @@ const HomeHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Spoontoo is a magic tool for restaurants. It turns a video of your
-            yummy dish into a 3D model that can be seen on your phone, and
-            experienced in real life using AR! 
+            Spoontoo is a magic tool converting your favorite dish into a 3D model for AR restaurant menus. Explore AR cafe fun at home using AR food menu tools!
           </motion.h5>
 
           <motion.button

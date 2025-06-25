@@ -88,7 +88,7 @@ const HighlightedFeatures = () => {
     <section className="w-full h-auto pb-6 lg:py-20  ">
       <div className="w-full width-container mx-auto flex flex-col items-center px-3 lg:px-14">
         {/* title & description */}
-        <div className="flex flex-col items-center">
+        <div className="w-full flex flex-col items-center">
           <motion.h3
             className="text-2xl lg:text-4xl font-bold"
             initial={{ opacity: 0, y: 50 }}
@@ -105,10 +105,11 @@ const HighlightedFeatures = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type
+            Spoontoo's AR food menu lets cafes and restaurants showcase dishes
+            in 3D with no app required. <br /> <br />
+            Create an interactive AR menu for cafes or a full restaurant AR food
+            menu from simple videos. It's fast, immersive, and works on any
+            smartphone — perfect for modern AR cafe experiences.
           </motion.h6>
         </div>
 
@@ -189,13 +190,13 @@ const HighlightedFeatures = () => {
                 viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% visible
               >
                 <Link href="/how-it-works">
-                <motion.button
-                  className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                >
-                  How It's Work
-                </motion.button>
+                  <motion.button
+                    className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  >
+                    How It's Work
+                  </motion.button>
                 </Link>
               </motion.div>
             </div>
@@ -224,17 +225,17 @@ const HighlightedFeatures = () => {
               ))}
             </div>
             <div className="flex w-72 items-center justify-center pb-4">
-              <Link href='/how-it-works'>
-            <motion.button
-              className="uppercase w-full h-fit text-nowrap px-6 py-3 text-white bg-secondary rounded-md  text-sm"
-              initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-            >
-              How It's Work
-            </motion.button>
-            </Link>
+              <Link href="/how-it-works">
+                <motion.button
+                  className="uppercase w-full h-fit text-nowrap px-6 py-3 text-white bg-secondary rounded-md  text-sm"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  How It's Work
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>

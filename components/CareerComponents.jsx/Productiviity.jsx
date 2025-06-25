@@ -17,20 +17,21 @@ const Productiviity = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h3 className="font-semibold text-2xl lg:text-3xl w-[80%] text-center lg:text-start">
-            Best Quality And Productivity Comes from Happy Minds
+          <h3 className="font-semibold text-[22px] lg:text-3xl w-full lg:w-[80%] text-center lg:text-start">
+            We Believe in Equal Opportunity — And That Best Work Comes from
+            Happy Minds
           </h3>
-          <h6 className="w-[80%] pt-5 text-sm  text-center lg:text-justify px-3 sm:px-0">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printertook. <br />
+          <h6 className="w-full lg:w-[80%] pt-5 text-sm  text-center lg:text-justify px-3 sm:px-0">
+            At Spoontoo, we know that great work happens when people feel
+            valued, supported, and respected. That's why we foster a workplace
+            where everyone has an equal voice, and where diversity of thought
+            and background is celebrated.
             <br />
-            .Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took..Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took.
+            <br />
+            We create space for happiness — not just productivity. Because when
+            people are happy, creative, and motivated, the work speaks for
+            itself. We invest in our team's growth, well-being, and balance — so
+            they can do their best work every day.
           </h6>
         </motion.div>
 

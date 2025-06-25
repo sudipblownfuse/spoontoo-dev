@@ -8,37 +8,37 @@ import demoIcon1 from "@/public/how-it-works/demoIcon.png";
 const ProcessFlow = () => {
   const data = [
     {
-      title: "Photographing an object",
+      title: "Photographing an Object",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "Capture clear images or a short video of the dish from multiple angles to highlight its details, texture, and shape.",
       img: demoIcon1,
       bg: "#FFC6C6",
     },
     {
       title: "Photo Processing",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "The photos or video frames are reviewed and enhanced to ensure proper lighting, clarity, and consistency for accurate 3D modeling.",
       img: demoIcon1,
       bg: "#FFD4D4",
     },
     {
-      title: "Convert photos to 3D model",
+      title: "Convert Photos to 3D Model",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "The processed visuals are converted into a detailed 3D model that allows viewers to explore the dish from all sides.",
       img: demoIcon1,
       bg: "#FFE1E1",
     },
     {
-      title: "Model processing in 3D program",
+      title: "Model Processing in 3D Program",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "The 3D model is refined and polished using professional tools to match the real dish as closely as possible.",
       img: demoIcon1,
       bg: "#FFEBEB",
     },
     {
-      title: "Optimization and preparation for AR",
+      title: "Optimization and Preparation for AR",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "The final model is optimized for fast performance and prepared for seamless use in an AR food menu on any device.",
       img: demoIcon1,
       bg: "#FFF2F2",
     },

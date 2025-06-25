@@ -10,35 +10,35 @@ const FourSpheres = () => {
     {
       title: "Customers",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "We put our users first — always. Every product we build and every update we release is focused on making their experience better, easier, and more memorable.",
       img: demoIcon1,
       bg: "#FFC6C6",
     },
     {
       title: "Peers",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "We support each other. Collaboration, respect, and shared wins are what keep us moving forward as a team — not just as individuals.",
       img: demoIcon1,
       bg: "#FFD4D4",
     },
     {
       title: "Family & Self",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "We believe great work starts with well-being. That means making space for personal time, mental health, and the people that matter most.",
       img: demoIcon1,
       bg: "#FFE1E1",
     },
     {
       title: "Society",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        "We’re part of something bigger. Whether through tech, storytelling, or sustainability, we aim to contribute meaningfully to the world around us.",
       img: demoIcon1,
       bg: "#FFEBEB",
     },
   ];
 
   return (
-    <section className="w-full h-auto py-5 sm:py-10">
+    <section className="w-full h-auto py-5 sm:py-10 pt-24">
       <div className="w-full width-container mx-auto px-3 md:px-14 flex flex-col items-center">
         {/* Heading section */}
         <div className="w-[90%] lg:w-[60%] flex flex-col items-center">

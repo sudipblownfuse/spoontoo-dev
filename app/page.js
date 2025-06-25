@@ -1,28 +1,11 @@
-"use client";
+import HomePageContent from "./HomePageContent";
 
-import AboutSpoontoo from '@/components/HomeComponents/AboutSpoontoo'
-import DiningExperience from '@/components/HomeComponents/DiningExperience';
-import HighlightedFeatures from '@/components/HomeComponents/HighlightedFeatures'
-import HomeFormSection from '@/components/HomeComponents/HomeFormSection';
-import HomeHero from '@/components/HomeComponents/HomeHero'
-import OurTopClients from '@/components/HomeComponents/OurTopClients';
-import ScanToExperience from '@/components/HomeComponents/ScanToExperience';
-import SuccessStories from '@/components/HomeComponents/SuccessStories';
-import React from 'react'
 
-const page = () => {
-  return (
-    <main className="min-h-screen">
-      <HomeHero/>
-      <AboutSpoontoo/>
-      <ScanToExperience/>
-      <HighlightedFeatures/>
-      <OurTopClients/>
-      <DiningExperience/>
-      <SuccessStories/>
-      <HomeFormSection/>
-    </main>
-  )
+export const metadata = {
+  title: "Spoontoo AR Menus for Restaurants and Cafes",
+  description: "Bring your food to life with Spoontoo AR Menu. Explore dishes in 3D without the need of any apps."
 }
 
-export default page
+export default function HomePage() {
+  return <HomePageContent />;
+}
