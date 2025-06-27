@@ -60,27 +60,27 @@ const AboutHero = () => {
 
   return (
     <section className="w-full relative h-auto bg-[#101010] pt-10 flex flex-col items-center justify-center">
-      <div className="relative w-full h-[600px] md:h-[450px] width-container mx-auto flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-14">
+      <div className="relative w-full h-[700px] md:h-[450px] width-container mx-auto flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-14">
         {/* text section */}
         <div className=" w-full md:w-[60%] flex flex-col items-center md:items-start mb-12 sm:mb-0">
           <motion.h1
-            className="text-white font-bold text-4xl sm:5xl lg:text-6xl text-center md:text-start"
+            className="text-white font-bold text-4xl lg:5xl  text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            About Us
+            About Spoontoo
           </motion.h1>
 
           <motion.h5
-            className="text-sm w-[90%] md:w-[55%] text-white py-5 sm:py-8 md:py-10 text-center md:text-start"
+            className="text-sm w-[90%] md:w-[65%] text-white py-5 sm:py-8 md:py-10 text-center md:text-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Spoontoo is a magic tool for restaurants. It turns a video of your
-            yummy dish into a 3D model that can be seen on your phone, and
-            experienced in real life using AR! 
+            A picture may be worth a thousand words, but even the most beautiful photo on a menu can't truly capture the essence of your culinary creations. <br />
+            What if you could bridge that gap? What if you could let your patrons see and experience your food in stunning 3D AR menu before they even order? <br />
+            Spoontoo is here to make that a reality!
           </motion.h5>
 
         </div>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const JoinUs = () => {
   return (
@@ -14,21 +15,22 @@ const JoinUs = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Want to join us?
+          Are You Ready For Your <br />Restaurant AR Food Menu?
         </motion.h2>
 
         <motion.h6
-          className="text-center pt-8 pb-7"
+          className="text-center pt-8 pb-7 w-full sm:w-[80%]"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Working at Spoontoo is more than just a job.
-          <br />
-          Want to come along for the ride?
+          Don't let your best dishes go unnoticed. With Spoontoo's AR food menu, you're not just serving meals — you're serving unforgettable experiences. <br /><br />
+          Ready to turn your menu into a masterpiece? Get started with Spoontoo today.
+
         </motion.h6>
 
+<Link href="/contact">
         <motion.button
           className="uppercase w-fit px-6 py-3 text-white bg-secondary rounded-md my-3"
           initial={{ opacity: 0, y: 50 }}
@@ -37,8 +39,9 @@ const JoinUs = () => {
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
         >
-          Browse Job Openings
+          Contact Us
         </motion.button>
+        </Link>
       </div>
     </section>
   );

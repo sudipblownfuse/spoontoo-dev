@@ -15,70 +15,27 @@ import team3 from "@/public/aboutImages/ourTeam/team3.png";
 const successStories = [
   {
     id: 1,
-    name: "Debayan Mukhopadhyay",
-    story: [
-      "ISM at Adobe, Ex-HDFC Bank, 5+ years Co-Founder Rhodotion (Agri Supply chain) with 13+ years of experience across sectors",
-      "Experience of working with Management, Sales and Marketing, Branding, Strategy and Finance with MNCs and Startups",
-      "Winner Spikes Digital Asia Award 2014",
-    ],
-    img: team1,
-    designation: "COO",
+    name: "Projesh Mehta",
+    story: "A visionary entrepreneur, Projesh brings his experience from co-founding Wedding Bliss to lead Spoontoo's strategic growth.",
+    img: team3,
+    designation: "ceo",
   },
   {
     id: 2,
     name: "Indrajit Adhikary",
-    story: [
-      "Ex-Tcs and Technology Consultant with experience of 9+ years",
-      "System Architect, Software Engineer, Full Stack Development, Game Development and Management",
-      "Experience of working with MNCs and building solutions for multiple startups for growth and scalability.",
-    ],
+    story: "As the architect of our technology, Indrajit's expertise is the engine behind our revolutionary platform.",
     img: team2,
     designation: "CTO",
   },
   {
     id: 3,
-    name: "Projesh Mehta",
-    story: [
-      "Co Founder Wedding Bliss with 9+ years of experience across Technology & Design",
-      "Unity Development, UI/UX Design and Development, Front-end Development, IOT Application and Hardware Prototyping",
-      "Experience of consulting multiple startups with development, Award winning Documentary FilmMaker and game consultant",
-    ],
-    img: team3,
-    designation: "ceo",
-  },
-  {
-    id: 4,
     name: "Debayan Mukhopadhyay",
-    story: [
-      "ISM at Adobe, Ex-HDFC Bank, 5+ years Co-Founder Rhodotion (Agri Supply chain) with 13+ years of experience across sectors",
-      "Experience of working with Management, Sales and Marketing, Branding, Strategy and Finance with MNCs and Startups",
-      "Winner Spikes Digital Asia Award 2014",
-    ],
+    story: "With over a decade of experience and a background in scaling operations as the co-founder of Rhodotion, Debayan ensures a seamless experience for our partners.",
     img: team1,
     designation: "COO",
   },
-  {
-    id: 5,
-    name: "Indrajit Adhikary",
-    story: [
-      "Ex-Tcs and Technology Consultant with experience of 9+ years",
-      "System Architect, Software Engineer, Full Stack Development, Game Development and Management",
-      "Experience of working with MNCs and building solutions for multiple startups for growth and scalability.",
-    ],
-    img: team2,
-    designation: "CTO",
-  },
-  {
-    id: 6,
-    name: "Projesh Mehta",
-    story: [
-      "Co Founder Wedding Bliss with 9+ years of experience across Technology & Design",
-      "Unity Development, UI/UX Design and Development, Front-end Development, IOT Application and Hardware Prototyping",
-      "Experience of consulting multiple startups with development, Award winning Documentary FilmMaker and game consultant",
-    ],
-    img: team3,
-    designation: "ceo",
-  },
+  
+  
 ];
 
 const OurTeam = () => {
@@ -86,11 +43,9 @@ const OurTeam = () => {
 
   return (
     <section className="w-full h-auto bg-black flex flex-col justify-start items-center my-10 px-5 md:px-14">
-      <h3 className="text-3xl sm:text-4xl font-semibold text-white pt-10">Our Team</h3>
+      <h3 className="text-3xl sm:text-4xl font-semibold text-white pt-10">The Minds Behind the Menu Revolution</h3>
       <h6 className="w-[90%] sm:w-[60%] text-white text-center pt-4 pb-10 text-sm lg:text-base">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since.
+        Spoontoo is driven by a team of seasoned entrepreneurs with a track record of building successful and innovative companies:
       </h6>
 
       <div className="w-full width-container mx-auto relative px-5 md:px-20">
@@ -109,7 +64,7 @@ const OurTeam = () => {
           className="w-full px-10 flex justify-center"
         >
           {successStories.map((story, index) => (
-            <SwiperSlide key={story.id}>
+            <SwiperSlide key={index}>
               <motion.div
                 className="p-4 rounded-lg shadow-lg hover:cursor-pointer transition-all my-10"
                 initial={{ opacity: 0, y: 50 }}
@@ -134,11 +89,11 @@ const OurTeam = () => {
                     <h5 className="uppercase font-semibold text-sm text-gray-300 pl-3">
                       .{story.designation}
                     </h5>
-                    {story.story.map((sec, i) => (
-                      <p key={i} className="text-gray-300 mt-2 text-center text-sm md:text-base">
-                        {sec}
+                    
+                      <p className="text-gray-300 mt-2 text-center text-sm md:text-base">
+                        {story.story}
                       </p>
-                    ))}
+                    
                   </div>
                 </div>
               </motion.div>

@@ -1,20 +1,11 @@
-"use client";
+import ContactContent from "./ContactContent";
 
-import ContactForm from '@/components/ContactComponents/ContactForm';
-import FAQ from '@/components/ContactComponents/FAQ';
-import MapView from '@/components/ContactComponents/MapView';
-import NewsletterSIgnUp from '@/components/ContactComponents/NewsletterSIgnUp';
-import React from 'react'
 
-const page = () => {
-  return (
-    <main className='w-full min-h-screen pt-28'>
-        <ContactForm/>
-        <MapView/>
-        <FAQ/>
-        <NewsletterSIgnUp/>
-    </main>
-  )
+export const metadata = {
+  title: "Contact Us | Talk to the AR Menus Experts at Spoontoo",
+  description: "Need help with AR menus or platform features? Use our contact form to connect with the Spoontoo team quickly and easily."
 }
 
-export default page
+export default function ContactPage(){
+  return <ContactContent/>
+}
