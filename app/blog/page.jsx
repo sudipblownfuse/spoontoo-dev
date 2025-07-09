@@ -5,7 +5,9 @@ export const metadata = {
   description: "Explore the latest on AR food menus, cafe tech trends, and how immersive tools are changing the way people experience food."
 }
 
-export default function CareerPage() {
+
+
+export default function Page() {
   return <BlogContent />;
 }
 

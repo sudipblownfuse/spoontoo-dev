@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useNotification } from "@/context/NotificationContext";
-import { recentBlogs } from "@/app/blog/page";
 import { FaRegClock } from "react-icons/fa";
 import category1Img from "@/public/blog/category1.png";
 import category2Img from "@/public/blog/category2.png";
 import category3Img from "@/public/blog/category3.png";
 import category4Img from "@/public/blog/category4.png";
 import { useRouter } from "next/navigation";
+import { recentBlogs } from "@/app/blog/BlogContent";
 
 const ViewBlogSuggestionSec = ({ blog }) => {
   const { addNotification } = useNotification();

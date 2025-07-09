@@ -16,7 +16,8 @@ import ab4 from "@/public/blog/all-blogs/ab4.png"
 import ab5 from "@/public/blog/all-blogs/ab5.png"
 import ab6 from "@/public/blog/all-blogs/ab6.png"
 
-   export const recentBlogs = [
+   
+export const recentBlogs = [
         {
             id:20,
             image: rb1,

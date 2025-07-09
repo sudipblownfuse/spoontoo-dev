@@ -3,10 +3,10 @@
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
-import { allBlogs, recentBlogs } from "../page";
 import ViewBlogBody from "@/components/BlogComponents/ViewBlogComponents/ViewBlogBody";
 import ViewBlogSuggestionSec from "@/components/BlogComponents/ViewBlogComponents/ViewBlogSuggestionSec";
 import { FaAngleLeft } from "react-icons/fa";
+import { allBlogs, recentBlogs } from "../BlogContent";
 
 export default function Page() {
   const { scrollYProgress } = useScroll();
