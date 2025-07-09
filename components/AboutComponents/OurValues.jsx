@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 const OurValues = () => {
   const data = [
     {
-      title: "Default to Transparency",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      title: "Effortless 3D Creation",
+      desc: "Forget complex photoshoots and expensive equipment. If you can take a video of your dish, you can create a stunning 3D model with Spoontoo.",
     },
     {
-      title: "Improve Consistently",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      title: "No App, No Barrier",
+      desc: "Your customers can access your 3D menu instantly through a QR code or a link. By removing the need to download an app, we ensure a seamless and inclusive experience for everyone.",
     },
     {
-      title: "Be a No-Ego Doer",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      title: "Drive Sales and Engagement",
+      desc: "An interactive menu isn't just a novelty; it's a powerful sales tool. By giving customers a true-to-life preview, you empower them to order more adventurously and with greater confidence, directly impacting your bottom line.",
     },
     {
-      title: "Choose Optimism",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      title: "Amplify Your Brand",
+      desc: "Our shareable 3D models turn your customers into your best marketers. Imagine your signature dish going viral on social media in stunning augmented reality.",
     },
   ];
 
@@ -32,7 +32,7 @@ const OurValues = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Our values
+          Why Choose Spoontoo For <br />Your AR Cafe Makeover?
         </motion.h3>
 
         <motion.h6
@@ -42,10 +42,7 @@ const OurValues = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Since 2013, we’ve been open with Buffer’s finances and our team’s
-          salaries, among many other metrics. We share openly because we believe
-          in the power of transparency to build trust, hold us accountable to a
-          high standard, and push our industry forward.
+         In a fast-paced industry, you need solutions that are both impactful and easy to implement. That's the core of Spoontoo's design.
         </motion.h6>
 
         <div className="w-full h-auto flex flex-col sm:flex-row justify-center items-center flex-wrap pt-6 sm:pt-14">

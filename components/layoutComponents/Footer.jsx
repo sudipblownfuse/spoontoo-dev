@@ -17,7 +17,7 @@ const Footer = () => {
   const sitemapList1 = [
     { name: "HOME", path: "/" },
     { name: "About US", path: "/about" },
-    { name: "How It's Work", path: "/how-it-works" },
+    { name: "How It Works", path: "/how-it-works" },
     {name: "Blogs", path: "/blog"},
     { name: "Pricing", path: "/pricing" },
   ];
