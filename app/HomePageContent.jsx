@@ -17,7 +17,7 @@ export default function HomePageContent() {
       <AboutSpoontoo />
       <ScanToExperience />
       <HighlightedFeatures />
-      <OurTopClients />
+      {/* <OurTopClients /> */}
       <DiningExperience />
       <SuccessStories />
       <HomeFormSection />

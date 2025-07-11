@@ -2,8 +2,8 @@ import PricingMAIN from "@/components/PricingComponents/PricingMAIN";
 
 
 export const metadata = {
-  title: "What are AR Menus For Cafes and How Do they Work",
-  description: "Discover what AR menus are and how they help cafes show food in 3D. Learn how they work and why they boost engagement and orders"
+  title: "Affordable AR Menu Pricing Plans | Spoontoo",
+  description: "Discover Spoontoo’s transparent AR menu pricing. Choose the perfect plan for your restaurant and start boosting customer engagement."
 }
 
 export default function PricingPage() {

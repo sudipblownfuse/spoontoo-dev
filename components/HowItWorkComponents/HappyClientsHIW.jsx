@@ -8,58 +8,34 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
-import team1 from "@/public/aboutImages/ourTeam/team1.png";
-import team2 from "@/public/aboutImages/ourTeam/team2.png";
-import team3 from "@/public/aboutImages/ourTeam/team3.png";
+import Jessica from "@/public/how-it-works/clients/Jessica.jpg"
+import Caffe from "@/public/how-it-works/clients/Caffe.webp"
+import RachelSimmons from "@/public/how-it-works/clients/Rachel-Simmons.jpg"
 
 const clientData = [
   {
     id: 1,
-    name: "Debayan Mukhopadhyay",
+    name: "Jessica Morgan",
     comment:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an .",
-    img: team1,
-    designation: "COO",
+      "Spoontoo completely transformed how our guests interact with our menu. It’s innovative, easy to use, and helped increase our dessert sales by 30%.",
+    img: Jessica,
+    designation: "Sweet Cravings Bakery",
   },
   {
     id: 2,
-    name: "Indrajit Adhikary",
+    name: "",
     comment:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an .",
-    img: team2,
-    designation: "CTO",
+      "We wanted something unique that could enhance our dine-in experience. Spoontoo’s AR technology did just that and our customers love it.",
+    img: Caffe,
+    designation: "Cafe By The Lane, Kolkata",
   },
   {
     id: 3,
-    name: "Projesh Mehta",
+    name: "Rachel Simmons",
     comment:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an .",
-    img: team3,
-    designation: "ceo",
-  },
-  {
-    id: 4,
-    name: "Debayan Mukhopadhyay",
-    comment:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an .",
-    img: team1,
-    designation: "COO",
-  },
-  {
-    id: 5,
-    name: "Indrajit Adhikary",
-    comment:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an .",
-    img: team2,
-    designation: "CTO",
-  },
-  {
-    id: 6,
-    name: "Projesh Mehta",
-    comment:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an .",
-    img: team3,
-    designation: "ceo",
+      "From custom branding to seamless integration, Spoontoo delivered beyond expectations. Their platform brought our food visuals to life.",
+    img: RachelSimmons,
+    designation: "Bella Bites Café",
   },
 ];
 
@@ -90,7 +66,7 @@ const HappyClientsHIW = () => {
           {clientData.map((story, index) => (
             <SwiperSlide key={story.id}>
               <motion.div
-                className="flex flex-col items-start p-7 border-[2px] border-gray-600 rounded-2xl rounded-tr-[100px] hover:cursor-pointer transition-all my-10"
+                className="h-72 flex flex-col items-start p-7 border-[2px] border-gray-600 rounded-2xl rounded-tr-[100px] hover:cursor-pointer transition-all my-10"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
